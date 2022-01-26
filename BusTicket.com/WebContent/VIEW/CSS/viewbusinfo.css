@@ -1,0 +1,14 @@
+.dropdown .dropbtn {
+	
+   margin: 0;
+   font-size: 15px;
+   border: none;
+   outline: none;
+   color: white;
+   padding: 14px 34px;
+   background-color: inherit;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   transition: 0.4s ease-in-out;
+   font-weight: bold;
+  
+}

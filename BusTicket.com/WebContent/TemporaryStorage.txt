@@ -1,0 +1,494 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1" import=" java.util.concurrent.TimeUnit"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<title>Insert title here</title>
+	<style>
+		.loader {
+			position: absolute;
+			top: 150px;
+			left: 650px;
+			  border: 16px solid rgb(77, 77, 77);
+			  border-radius: 50%;
+			  border-top: 16px solid #ffc400;
+			  width: 120px;
+			  height: 120px;
+			  -webkit-animation: spin 2s linear infinite; /* Safari */
+			  animation: spin 2s linear infinite;
+		}
+		
+		#text {
+			position: absolute;
+			top: 350px;
+			left: 550px;
+			font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   			font-weight: bold;
+   			font-size: 20px;
+		}
+		
+		@-webkit-keyframes spin {
+		  0% { -webkit-transform: rotate(0deg); }
+		  100% { -webkit-transform: rotate(360deg); }
+		}
+		
+		@keyframes spin {
+		  0% { transform: rotate(0deg); }
+		  100% { transform: rotate(360deg); }
+		}
+	</style>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function startTimer(duration, display) {
+			    var start = Date.now(),
+			        diff,
+			        minutes,
+			        seconds;
+			    var flag = true;
+			    function timer() {
+			        // get the number of seconds that have elapsed since 
+			        // startTimer() was called
+			        diff = duration - (((Date.now() - start) / 1000) | 0);
+	
+			        // does the same job as parseInt truncates the float
+			        minutes = (diff / 60) | 0;
+			        seconds = (diff % 60) | 0;
+	
+			        minutes = minutes < 10 ? "0" + minutes : minutes;
+			        seconds = seconds < 10 ? "0" + seconds : seconds;
+					
+			        if(diff > 0) {
+			        display.textContent = minutes + ":" + seconds; 
+			        }
+	
+			        if (diff == 0) {
+			            alert("Payment Success !!!");
+			            window.location.href = "FinalTicketProcess";
+			        
+			            flag = false;
+			            return false;
+			        }
+			    };
+			    if (diff == 0) {
+			            flag = false;
+			            return false;
+			        }
+			    if(flag != false) {
+			    	timer();
+		        	setInterval(timer, 1000);
+			    } else {
+			    	return false;
+			    }
+			   return false;
+			}
+	
+			window.onload = function () {
+			    var fiveMinutes = 5 * 1,
+			        display = document.querySelector('#time');
+			    startTimer(fiveMinutes, display);
+			    return false;
+			};
+		</script>
+		<div class="loader"></div>
+		<p id="text">Please wait. Your Payment is Processing</p>
+		<span id="time" hidden></span>
+		
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+--------------------------------------------
+package net.codejava.upload;
+
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class DownloadPdf
+ */
+@WebServlet("/DownloadPdf")
+public class DownloadPdf extends HttpServlet {
+	/*processRequest*/
+	protected void doGet (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+		
+		response.setContentType("text/html;charset=UTF-8");
+		try(PrintWriter out = response.getWriter()) {
+			String name = "abc.pdf";
+			String path = getServletContext().getRealPath("/"+"files"+File.separator+name);
+			out.println(path);
+			//C:\Users\DELL\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\PdfViewer\files\abc.pdf
+			//response.setContentType("APPLICATION/OCTET-STREAM");
+			
+			//response.setHeader("Content-Disposition", "attachment; filename=\""+name+"\"");
+				FileInputStream ins = new FileInputStream(path);
+				DataInputStream iii = new DataInputStream(ins);
+				/*System.out.println(ins);
+				int i ;
+				while((i=iii.read()) != -1) {
+					System.out.print(i+" ");
+					out.write(i);
+				}
+				ins.close();
+				out.flush();
+				out.close();*/
+			/*FileOutputStream fout = new FileOutputStream("C:\\Users\\DELL\\1.pdf");
+			//FileWriter fout = new FileWriter("C:\\Users\\DELL\\Desktop\\1.pdf");
+			//BufferedWriter dout = new BufferedWriter(fout); 
+			DataOutputStream dout = new DataOutputStream(fout);
+int i;
+			while((i=iii.read()) != -1) {
+			    dout.write(i);  
+			} 
+
+			dout.flush();
+			fout.close();*/
+			
+		}
+	}
+
+}
+
+---------------------------------
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BusTicket.com</title>
+        <link rel="stylesheet" href="VIEW/CSS/seatbook.css">
+        <link rel="icon" type="image/png" href="VIEW/CSS/IMAGES/favicon.png">
+    </head>
+    <body>
+    <script>
+    	function handleClick(obj) {
+			
+    		var id = document.getElementById(obj.id);
+    		
+    		if(id.title == "on") {
+    			id.style.backgroundColor = "#dedede";
+    			id.title = "off"
+    		} else {
+    			id.style.backgroundColor = "#75ff70";
+    			id.title = "on"
+    		}
+    		console.log(id.title);
+    	}
+    </script>
+        <div class="main">
+            <div class="navbar">
+                <div class="icon">
+                    <h2 class="logo"><a href="#">BusTicket.com</a></h2>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="www.google.com">HOME</a></li>
+                        <li><a href="#">ABOUT</a></li>
+                        <li><a href="#">SERVICE</a></li>
+                        <div class="dropdown">
+                            <button class="dropbtn">ACCOUNT 
+                            <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                            <a href="#">PROFILE</a>
+                            <a href="#">SIGN OUT</a>
+                            </div>
+                        </div> 
+                    </ul>
+                </div>
+            </div>
+            <div class="bus_seatBooking">
+            	<span id="exit">EXIT</span>
+            	<span id="driver"><span id="driver_inside">Driver</span></span>
+            	<input type="button" id="seat_s1" name="1" value="S1" title="off" onclick='handleClick(this);'>
+            	<input type="button" id="seat_s2" name="2" value="S2" title="off" onclick='handleClick(this);'>
+            	<input type="button" id="seat_s3" name="3" value="S3" title="off" onclick='handleClick(this);'>
+            	<input type="button" id="seat_s4" name="4" value="S4" title="off" onclick='handleClick(this);'>
+            	
+            	<input type="button" id="seat_s5" name="5" value="S5" title="off" onclick='handleClick(this);'>
+            	<input type="button" id="seat_s6" name="6" value="S6" title="off" onclick='handleClick(this);'>
+            	<input type="button" id="seat_s7" name="7" value="S7" title="off" onclick='handleClick(this);'>
+            	<input type="button" id="seat_s8" name="8" value="S8" title="off" onclick='handleClick(this);'>
+            	
+            	<input type="button" id="seat_s9" name="9" value="S9" title="off" onclick='handleClick(this);'>
+            	<input type="button" id="seat_s10" name="10" value="S10" title="off" onclick='handleClick(this);'>
+            	<input type="button" id="seat_s11" name="11" value="S11" title="off" onclick='handleClick(this);'>
+            	<input type="button" id="seat_s12" name="12" value="S12" title="off" onclick='handleClick(this);'>
+            	
+            	<input type="button" id="seat_s13" name="13" value="S13" title="off" onclick='handleClick(this);'>
+            	<input type="button" id="seat_s14" name="14" value="S14" title="off" onclick='handleClick(this);'>
+            	<input type="button" id="seat_s15" name="15" value="S15" title="off" onclick='handleClick(this);'>
+            	<input type="button" id="seat_s16" name="16" value="S16" title="off" onclick='handleClick(this);'>
+            	
+            	<input type="button" id="seat_s17" name="17" value="S17" title="off" onclick='handleClick(this);'>
+            	<input type="button" id="seat_s18" name="18" value="S18" title="off" onclick='handleClick(this);'>
+            	<input type="button" id="seat_s19" name="19" value="S19" title="off" onclick='handleClick(this);'>
+            	<input type="button" id="seat_s20" name="20" value="S20" title="off" onclick='handleClick(this);'>
+            	
+            	<input type="button" id="seat_s21" name="21" value="S21" title="off" onclick='handleClick(this);'>
+            	<input type="button" id="seat_s22" name="22" value="S22" title="off" onclick='handleClick(this);'>
+            	<input type="button" id="seat_s23" name="23" value="S23" title="off" onclick='handleClick(this);'>
+            	<input type="button" id="seat_s24" name="24" value="S24" title="off" onclick='handleClick(this);'>
+            	
+            	<input type="button" id="seat_s25" name="25" value="S25" title="off" onclick='handleClick(this);'>
+            	<input type="button" id="seat_s26" name="26" value="S26" title="off" onclick='handleClick(this);'>
+            	<input type="button" id="seat_s27" name="27" value="S27" title="off" onclick='handleClick(this);'>
+            	<input type="button" id="seat_s28" name="28" value="S28" title="off" onclick='handleClick(this);'>
+            	
+            	<input type="button" id="seat_s29" name="29" value="S29" title="off" onclick='handleClick(this);'>
+            	<input type="button" id="seat_s30" name="30" value="S30" title="off" onclick='handleClick(this);'>
+            	<input type="button" id="seat_s31" name="31" value="S31" title="off" onclick='handleClick(this);'>
+            	<input type="button" id="seat_s32" name="32" value="S32" title="off" onclick='handleClick(this);'>
+            	<input type="button" id="seat_s33" name="33" value="S33" title="off" onclick='handleClick(this);'>
+            	<input type="button" id="seat_s34" name="34" value="S34" title="off" onclick='handleClick(this);'>
+            	
+            </div>
+        </div>
+    </body>
+</html>
+
+--------------------------------------------------------------
+mysql> CREATE TABLE example (
+    ->   `id` int NOT NULL AUTO_INCREMENT,
+    ->   `docs` JSON,
+    ->
+String tt = "\'[\"k\"]\'";
+			Statement st = connection.createStatement();
+			int r = st.executeUpdate("insert into example values(11,"+tt+");");
+---------------------------------------------------
+Date in js
+
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+function hello() {
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth()+1; //January is 0 so need to add 1 to make it 1!
+    var yyyy = today.getFullYear();
+    if(dd<10){
+      dd='0'+dd
+    } 
+    if(mm<10){
+      mm='0'+mm
+    } 
+    today = yyyy+'-'+mm+'-'+dd;
+	document.getElementById("birthday").setAttribute("min",today); 
+}
+</script>
+<h1>Show a Date Control</h1>
+
+<form action="/action_page.php">
+  <label for="birthday">Birthday:</label>
+  <input type="date" id="birthday" name="birthday" onclick="hello()">
+  <input type="submit">
+</form>
+
+<p><strong>Note:</strong> type="date" is not supported in Internet Explorer 11 or prior Safari 14.1.</p>
+<p id="op"></p>
+</body>
+</html>
+
+-------------------------------------------------------------------------------------------------------
+-------------
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BusTicket.com</title>
+        <link rel="stylesheet" href="VIEW/CSS/seatbook.css">
+        <link rel="icon" type="image/png" href="VIEW/CSS/IMAGES/favicon.png">
+    </head>
+    <body>
+    <script>
+    	function handleClick(obj) {
+			
+    		var id = document.getElementById(obj.id);
+    		var arr = document.getElementById("seats_booked_now");
+    		var text = arr.innerHTML;
+    		if(text.length == 0) {
+    			text += obj.value;
+    		} else {
+    			text += ","+obj.value;
+    		}
+    		var array = text.split(",");
+    		var uniqueChars = [];
+    		array.forEach((c) => {
+    		    if (!uniqueChars.includes(c)) {
+    		        uniqueChars.push(c);
+    		    }
+    		});
+    		if(uniqueChars.length > 8) {
+    			alert("Only 8 seats can booked per transcation");
+    			return;
+    		}
+    		if(id.title == "Unselect") {
+    			id.style.backgroundColor = "#dedede";
+    			id.title = "Select";
+    			const index = array.indexOf(id.value);
+    			if (index > -1) {
+    				uniqueChars.splice(index, 1);
+    			}
+    		} else {
+    			id.style.backgroundColor = "#75ff70";
+    			id.title = "Unselect";
+    			
+    		}
+    		uniqueChars.sort();
+    		arr.innerHTML = uniqueChars.toString();
+    		console.log(text);
+    		console.log(id.value);
+    	}
+    </script>
+        <div class="main">
+            <div class="navbar">
+                <div class="icon">
+                    <h2 class="logo"><a href="#">BusTicket.com</a></h2>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="www.google.com">HOME</a></li>
+                        <li><a href="#">ABOUT</a></li>
+                        <li><a href="#">SERVICE</a></li>
+                        <div class="dropdown">
+                            <button class="dropbtn">ACCOUNT 
+                            <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                            <a href="#">PROFILE</a>
+                            <a href="#">SIGN OUT</a>
+                            </div>
+                        </div> 
+                    </ul>
+                </div>
+            </div>
+            <div class="bus_seatBooking">
+            	<span id="exit">EXIT</span>
+            	<span id="driver"><span id="driver_inside">Driver</span></span>
+            	<input type="button" id="seat_s01" name="01" value="S01" title="Select" onclick='handleClick(this);'>
+            	<input type="button" id="seat_s02" name="02" value="S02" title="Select" onclick='handleClick(this);'>
+            	<input type="button" id="seat_s03" name="03" value="S03" title="Select" onclick='handleClick(this);'>
+            	<input type="button" id="seat_s04" name="04" value="S04" title="Select" onclick='handleClick(this);'>
+            	
+            	<input type="button" id="seat_s05" name="05" value="S05" title="Select" onclick='handleClick(this);'>
+            	<input type="button" id="seat_s06" name="06" value="S06" title="Select" onclick='handleClick(this);'>
+            	<input type="button" id="seat_s07" name="07" value="S07" title="Select" onclick='handleClick(this);'>
+            	<input type="button" id="seat_s08" name="08" value="S08" title="Select" onclick='handleClick(this);'>
+            	
+            	<input type="button" id="seat_s09" name="09" value="S09" title="Select" onclick='handleClick(this);'>
+            	<input type="button" id="seat_s10" name="10" value="S10" title="Select" onclick='handleClick(this);'>
+            	<input type="button" id="seat_s11" name="11" value="S11" title="Select" onclick='handleClick(this);'>
+            	<input type="button" id="seat_s12" name="12" value="S12" title="Select" onclick='handleClick(this);'>
+            	
+            	<input type="button" id="seat_s13" name="13" value="S13" title="Select" onclick='handleClick(this);'>
+            	<input type="button" id="seat_s14" name="14" value="S14" title="Select" onclick='handleClick(this);'>
+            	<input type="button" id="seat_s15" name="15" value="S15" title="Select" onclick='handleClick(this);'>
+            	<input type="button" id="seat_s16" name="16" value="S16" title="Select" onclick='handleClick(this);'>
+            	
+            	<input type="button" id="seat_s17" name="17" value="S17" title="Select" onclick='handleClick(this);'>
+            	<input type="button" id="seat_s18" name="18" value="S18" title="Select" onclick='handleClick(this);'>
+            	<input type="button" id="seat_s19" name="19" value="S19" title="Select" onclick='handleClick(this);'>
+            	<input type="button" id="seat_s20" name="20" value="S20" title="Select" onclick='handleClick(this);'>
+            	
+            	<input type="button" id="seat_s21" name="21" value="S21" title="Select" onclick='handleClick(this);'>
+            	<input type="button" id="seat_s22" name="22" value="S22" title="Select" onclick='handleClick(this);'>
+            	<input type="button" id="seat_s23" name="23" value="S23" title="Select" onclick='handleClick(this);'>
+            	<input type="button" id="seat_s24" name="24" value="S24" title="Select" onclick='handleClick(this);'>
+            	
+            	<input type="button" id="seat_s25" name="25" value="S25" title="Select" onclick='handleClick(this);'>
+            	<input type="button" id="seat_s26" name="26" value="S26" title="Select" onclick='handleClick(this);'>
+            	<input type="button" id="seat_s27" name="27" value="S27" title="Select" onclick='handleClick(this);'>
+            	<input type="button" id="seat_s28" name="28" value="S28" title="Select" onclick='handleClick(this);'>
+            	
+            	<input type="button" id="seat_s29" name="29" value="S29" title="Select" onclick='handleClick(this);'>
+            	<input type="button" id="seat_s30" name="30" value="S30" title="Select" onclick='handleClick(this);'>
+            	<input type="button" id="seat_s31" name="31" value="S31" title="Select" onclick='handleClick(this);'>
+            	<input type="button" id="seat_s32" name="32" value="S32" title="Select" onclick='handleClick(this);'>
+            	<input type="button" id="seat_s33" name="33" value="S33" title="Select" onclick='handleClick(this);'>
+            	<input type="button" id="seat_s34" name="34" value="S34" title="Select" onclick='handleClick(this);'>
+            	
+            </div>
+            <div class="selecting_panel">
+            	<label class="bp_label" for="bp">Boarding Point</label>
+				  <select class="bp_select" name="bp" id="bp">
+				    <option value="volvo">Volvo</option>
+				    <option value="saab">Saab</option>
+				    <option value="opel">Opel</option>
+				    <option value="audi">Audi</option>
+				  </select>
+				  <label class="dp_label" for="dp">Dropping Point</label>
+				  <select class="dp_select" name="dp" id="dp">
+				    <option value="volvo">Volvo</option>
+				    <option value="saab">Saab</option>
+				    <option value="opel">Opel</option>
+				    <option value="audi">Audi</option>
+				  </select>
+            </div>
+            <div class="final_panel">
+            	<h2 id="departure">Departure : Nagercoil</h2>
+            	<h2 id="destination">Destination : Coimbatore</h2>
+            	<h2 id="boarding">Boarding At : Tirunelveli</h2>
+            	<h2 id="dropping">Dropping At : Coimbatore</h2>
+            	<h2 id="date">Date : 20.12.2021</h2>
+            	<h2 id="time">09.30pm to 06.00am</h2>
+            	<h2 id="duration">09hrs travel</h2>
+            	<h2 id="seats_label">Seats Booked : </h2>
+            	<h2 id="seats_booked_now"></h2>
+            	<h2 id="price">Price Per Passenger : 700 INR</h2>
+            	<h3 id="insurance">Do you need a travel insurance ?</h3>
+            	<input type="radio" id="insurance_yes" name="i" value="YES">
+				<label for="yes" id="yes_label">YES</label><br>
+				<input type="radio" id="insurance_no" name="i" value="NO">
+				<label for="no" id="no_label">NO</label><br>
+				<div class="bill_panel">
+					<h2 id="tc">Total Cost:</h2>
+					<h2 id="ans_tc">700 INR /-</h2>
+					<h2 id="tc">SGST:</h2>
+					<h2 id="ans_tc">80 INR /-</h2>
+					<h2 id="tc">CST:</h2>
+					<h2 id="ans_tc">80 INR /-</h2>
+					<h2 id="final">Total Amount : </h2>
+					<h2 id="ans_final">1080 INR /-</h2>
+				</div>
+            </div>
+        </div>
+    </body>
+</html>
+-----------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

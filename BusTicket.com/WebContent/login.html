@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BusTicket.com</title>
+        <link rel="stylesheet" href="VIEW/CSS/login.css">
+        <link rel="icon" type="image/png" href="VIEW/CSS/IMAGES/favicon.png">
+    </head>
+    <body>
+        <script>
+            function showpassword() {
+                var temp = document.getElementById("input_text2");
+                if (temp.type === "password") {
+                    temp.type = "text";
+                }
+                else {
+                    temp.type = "password";
+                }
+            }
+    </script>
+        <div class="panel">
+            <h2 id="title_login">LOGIN</h2>
+            <form class="form_login" action="login" method="POST">
+                <label id="label_field1">EMAIL ID</label><br/>
+                <input id="input_text1" type="email" name="emailid" placeholder="Type E-Mail ID here..." required><br/><br/>
+                <label id="label_field2">PASSWORD</label>
+                <br/> 
+                <input id="input_text2" type="password" name="password" placeholder="Type Password here..." required>
+                <br/><br/>
+                <input type="checkbox" id="show_password" name="show_password" onclick="showpassword()">
+                <span id="label_show">show password</span><br>
+                <a id="forget_password" href="www.google.com">Forget Password?</a>
+                <input id="submit_login" type="submit" value="LOGIN">
+            </form>
+            <hr id="line1"><span id="or">OR</span><hr id="line2">
+            <button class="loginBtn loginBtn--facebook">
+                Login with Facebook
+            </button>
+            <button class="loginBtn loginBtn--google">
+                Login with Google
+            </button>
+        </div>
+    </body>
+</html>

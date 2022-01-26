@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BusTicket.com</title>
+        <link rel="stylesheet" href="VIEW/CSS/signup.css">
+        <link rel="icon" type="image/png" href="VIEW/CSS/IMAGES/favicon.png">
+    </head>
+    <body>
+        <script>
+            function passwordstrength() {
+                var newPassword = document.getElementById("input_text3").value;
+                var minNumberofChars = 6;
+                var regularExpression  = /^[a-zA-Z0-9!@#$%^&*]{6,50}$/;
+                if(newPassword.length == 0) {
+                    document.getElementById("password_strength").innerHTML = "";
+                }
+                else if(newPassword.length < minNumberofChars){
+                    document.getElementById("password_strength").innerHTML = "Weak";
+                    document.getElementById("password_strength").style.color = "red";
+                }
+                else if(!regularExpression.test(newPassword)) {
+                    document.getElementById("password_strength").innerHTML = "Normal";
+                    document.getElementById("password_strength").style.color = "gold";
+                } else if(regularExpression.test(newPassword)){
+                    document.getElementById("password_strength").innerHTML = "Strong";
+                    document.getElementById("password_strength").style.color = "green";
+                }
+            }
+        </script>
+        <div class="panel">
+            <h2 id="title_signup">CREATE ACCOUNT</h2>
+            <form class="form_signup" action="hello" method="POST">
+                <label id="label_field1">USERNAME</label><br/>
+                <input id="input_text1" type="text" name="username" placeholder="Type Username here..." required><br/><br/>
+                <label id="label_field2">EMAIL ID</label><br/>
+                <input id="input_text2" type="email" name="emailid" placeholder="Type E-Mail ID here..." required><br/><br/>
+                <label id="label_field3">SET PASSWORD</label>
+                <br/> 
+                <input id="input_text3" type="password" name="password" placeholder="Type Password here..." oninput="passwordstrength()" required>
+                <span id="password_strength"></span>
+                <br/><br/>
+                <label id="label_field4">CONFORM PASSWORD</label><br/>
+                <input id="input_text4" type="password" name="conform_password" placeholder="Type Password again" required><br/><br/>
+                <input id="submit_signup" type="submit" value="REGISTER">
+            </form>
+            <hr id="line1"><span id="or">OR</span><hr id="line2">
+            <button class="loginBtn loginBtn--facebook">
+                Signup with Facebook
+            </button>
+            <button class="loginBtn loginBtn--google">
+                Signup with Google
+            </button>
+        </div>
+    </body>
+</html>

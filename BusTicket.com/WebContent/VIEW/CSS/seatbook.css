@@ -1,0 +1,824 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    width : 100%;
+    height : 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.3), transparent), url(IMAGES/bus_main.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 0;
+    position: relative;
+}
+
+.navbar{
+    width : 1474px;
+    height : 50px;
+    background-color: rgb(77, 77, 77);
+}
+
+.icon{
+    width: 200px;
+    float: left;
+    left: 100px;
+    height: 70px;
+}
+
+.logo a{
+    color: #ffc400;
+    font-size: 35px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-left: 20px;
+    float: left;
+    text-decoration: none;
+}
+
+.menu {
+    width: 400px;
+    float: left;
+    height: 70px;
+}
+
+ul {
+    position: relative;
+    display: flex;
+    left: 800px;
+}
+
+ul li {
+    list-style: none;
+    margin-left: 62px;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+
+ul li a:hover {
+    color: #ffc400;
+}
+
+.dropdown {
+    float: right;
+  
+}
+
+.dropdown .dropbtn {
+	
+   margin: 0;
+   font-size: 15px;
+   border: none;
+   outline: none;
+   color: white;
+   padding: 14px 44px;
+   background-color: inherit;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   transition: 0.4s ease-in-out;
+   font-weight: bold;
+  
+}
+
+.dropdown:hover .dropbtn {
+   color: #ffc400;
+}
+
+.dropdown-content {
+   display: none;
+   position: absolute;
+   background-color: #f9f9f9;
+   min-width: 150px;
+   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   z-index: 1;
+   margin: 0;
+   font-size: 15px;
+   border: none;
+   outline: none;
+   color: white;
+   padding: 10px 10px;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   transition: 0.4s ease-in-out;
+   font-weight: bold;
+   cursor: pointer;
+  
+}
+
+.dropdown-content a {
+   float: none;
+   color: black;
+   padding: 12px 16px;
+   text-decoration: none;
+   display: block;
+   text-align: left;
+}
+
+.dropdown-content a:hover {
+   color: #ffc400;
+}
+
+.dropdown:hover .dropdown-content {
+   display: block;
+}
+
+.bus_seatBooking {
+	
+	position : absolute;
+	background-color: white;
+	top: 120px;
+	left: 40px;
+	width: 350px;
+	height: 600px;
+	border-radius: 20px;
+	opacity: 0.8;
+	border : solid 5px rgb(77, 77, 77);
+}
+
+#exit {
+	position: absolute;
+	color: rgb(77, 77, 77);
+	top: 35px;
+	left: 5px;
+	width: 75px;
+	height: 75px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#driver {
+	position: absolute;
+	top: 20px;
+	left: 250px;
+	width: 75px;
+	height: 75px;
+	background-color: white;
+	border: solid 2px rgb(77, 77, 77);
+	border-radius: 50%;
+	
+}
+
+#driver_inside, #u_berth,#l_berth  {
+	position: absolute;
+	color: rgb(77, 77, 77);
+	top: 25px;
+	left: 15px;
+	width: 150px;
+	height: 75px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#u_berth {
+	top: 15px;
+}
+
+#l_berth {
+	top: 15px;
+	left: 150px;
+}
+
+#seat_s01, #seat_s02, #seat_s03, #seat_s04 {
+	
+	position: absolute;
+	top: 120px;
+	left: 30px;
+	width: 40px;
+	height: 40px;
+}
+
+#seat_s02 {
+	left: 80px;
+}
+
+#seat_s03 {
+	left: 220px;
+}
+
+#seat_s04 {
+	left: 270px;
+}
+
+#seat_s05, #seat_s06, #seat_s07, #seat_s08 {
+	
+	position: absolute;
+	top: 180px;
+	left: 30px;
+	width: 40px;
+	height: 40px;
+}
+
+#seat_s06 {
+	left: 80px;
+}
+
+#seat_s07 {
+	left: 220px;
+}
+
+#seat_s08 {
+	left: 270px;
+}
+
+#seat_s09, #seat_s10, #seat_s11, #seat_s12 {
+	
+	position: absolute;
+	top: 240px;
+	left: 30px;
+	width: 40px;
+	height: 40px;
+}
+
+#seat_s10 {
+	left: 80px;
+}
+
+#seat_s11 {
+	left: 220px;
+}
+
+#seat_s12 {
+	left: 270px;
+}
+
+#seat_s13, #seat_s14, #seat_s15, #seat_s16 {
+	
+	position: absolute;
+	top: 300px;
+	left: 30px;
+	width: 40px;
+	height: 40px;
+}
+
+#seat_s14 {
+	left: 80px;
+}
+
+#seat_s15 {
+	left: 220px;
+}
+
+#seat_s16 {
+	left: 270px;
+}
+
+#seat_s17, #seat_s18, #seat_s19, #seat_s20 {
+	
+	position: absolute;
+	top: 360px;
+	left: 30px;
+	width: 40px;
+	height: 40px;
+}
+
+#seat_s18 {
+	left: 80px;
+}
+
+#seat_s19 {
+	left: 220px;
+}
+
+#seat_s20 {
+	left: 270px;
+}
+
+#seat_s21, #seat_s22, #seat_s23, #seat_s24 {
+	
+	position: absolute;
+	top: 420px;
+	left: 30px;
+	width: 40px;
+	height: 40px;
+}
+
+#seat_s22 {
+	left: 80px;
+}
+
+#seat_s23 {
+	left: 220px;
+}
+
+#seat_s24 {
+	left: 270px;
+}
+
+#seat_s25, #seat_s26, #seat_s27, #seat_s28 {
+	
+	position: absolute;
+	top: 480px;
+	left: 30px;
+	width: 40px;
+	height: 40px;
+}
+
+#seat_s26 {
+	left: 80px;
+}
+
+#seat_s27 {
+	left: 220px;
+}
+
+#seat_s28 {
+	left: 270px;
+}
+
+#seat_s29, #seat_s30, #seat_s31, #seat_s32, #seat_s33, #seat_s34 {
+	
+	position: absolute;
+	top: 540px;
+	left: 30px;
+	width: 40px;
+	height: 40px;
+}
+
+#seat_s30 {
+	left: 80px;
+}
+
+#seat_s31 {
+	left: 125px;
+}
+
+#seat_s32 {
+	left: 175px;
+}
+
+#seat_s33 {
+	left: 220px;
+}
+
+#seat_s34 {
+	left: 270px;
+}
+
+#seat_u01, #seat_u02, #seat_u03, #seat_u04 {
+	
+	position: absolute;
+	top: 120px;
+	left: 30px;
+	width: 40px;
+	height: 50px;
+}
+
+#seat_u02 {
+	left: 80px;
+}
+
+#seat_u03 {
+	left: 220px;
+}
+
+#seat_u04 {
+	left: 270px;
+}
+
+#seat_l05, #seat_l06, #seat_l07, #seat_l08 {
+	
+	position: absolute;
+	top: 170px;
+	left: 30px;
+	width: 40px;
+	height: 50px;
+}
+
+#seat_l06 {
+	left: 80px;
+}
+
+#seat_l07 {
+	left: 220px;
+}
+
+#seat_l08 {
+	left: 270px;
+}
+
+#seat_u09, #seat_u10, #seat_u11, #seat_u12 {
+	
+	position: absolute;
+	top: 240px;
+	left: 30px;
+	width: 40px;
+	height: 50px;
+}
+
+#seat_u10 {
+	left: 80px;
+}
+
+#seat_u11 {
+	left: 220px;
+}
+
+#seat_u12 {
+	left: 270px;
+}
+
+#seat_l13, #seat_l14, #seat_l15, #seat_l16 {
+	
+	position: absolute;
+	top: 290px;
+	left: 30px;
+	width: 40px;
+	height: 50px;
+}
+
+#seat_l14 {
+	left: 80px;
+}
+
+#seat_l15 {
+	left: 220px;
+}
+
+#seat_l16 {
+	left: 270px;
+}
+
+#seat_u17, #seat_u18, #seat_u19, #seat_u20 {
+	
+	position: absolute;
+	top: 360px;
+	left: 30px;
+	width: 40px;
+	height: 50px;
+}
+
+#seat_u18 {
+	left: 80px;
+}
+
+#seat_u19 {
+	left: 220px;
+}
+
+#seat_u20 {
+	left: 270px;
+}
+
+#seat_l21, #seat_l22, #seat_l23, #seat_l24 {
+	
+	position: absolute;
+	top: 410px;
+	left: 30px;
+	width: 40px;
+	height: 50px;
+}
+
+#seat_l22 {
+	left: 80px;
+}
+
+#seat_l23 {
+	left: 220px;
+}
+
+#seat_l24 {
+	left: 270px;
+}
+
+#seat_u25, #seat_u26, #seat_u27, #seat_u28 {
+	
+	position: absolute;
+	top: 480px;
+	left: 30px;
+	width: 40px;
+	height: 50px;
+}
+
+#seat_u26 {
+	left: 80px;
+}
+
+#seat_u27 {
+	left: 220px;
+}
+
+#seat_u28 {
+	left: 270px;
+}
+
+#seat_l29, #seat_l30, #seat_l31, #seat_l32 {
+	
+	position: absolute;
+	top: 530px;
+	left: 30px;
+	width: 40px;
+	height: 50px;
+}
+
+#seat_l30 {
+	left: 80px;
+}
+
+#seat_l31 {
+	left: 220px;
+}
+
+#seat_l32 {
+	left: 270px;
+}
+
+.selecting_panel {
+	
+	position: absolute;
+	top: 120px;
+	left: 450px;
+	width: 1000px;
+	height: 80px;
+	background-color: rgb(77, 77, 77);
+	opacity: 0.91;
+	border-radius: 50px;
+}
+
+.bp_label {
+	
+	position: absolute;
+	top: 30px;
+	left: 30px;
+	width: 300px;
+	height: 90px;
+	color: white;
+	font-size: 20px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+}
+
+.bp_select {
+	
+	position: absolute;
+	top: 27px;
+	left: 200px;
+	width: 200px;
+	height: 30px;
+	
+	font-size: 20px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+}
+
+.dp_label {
+	
+	position: absolute;
+	top: 30px;
+	left: 550px;
+	width: 300px;
+	height: 90px;
+	color: white;
+	font-size: 20px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+}
+
+.dp_select {
+	
+	position: absolute;
+	top: 27px;
+	left: 720px;
+	width: 200px;
+	height: 30px;
+	
+	font-size: 20px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+}
+
+.final_panel {
+	
+	position: absolute;
+	top: 220px;
+	left: 450px;
+	width: 1000px;
+	height: 500px;
+	background-color: white;
+	opacity: 0.91;
+	border-radius: 20px;
+}
+
+#departure {
+	
+	position: absolute;
+	top: 10px;
+	left : 10px;
+	font-size: 25px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+}
+
+#destination{
+	
+	position: absolute;
+	top: 10px;
+	left : 310px;
+	font-size: 25px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+}
+
+#boarding {
+	
+	position: absolute;
+	top: 60px;
+	left : 10px;
+	font-size: 25px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+}
+
+#dropping{
+	
+	position: absolute;
+	top: 60px;
+	left : 310px;
+	font-size: 25px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+}
+
+#date {
+	
+	position: absolute;
+	top: 110px;
+	left : 10px;
+	font-size: 25px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+}
+
+#time{
+	
+	position: absolute;
+	top: 110px;
+	left : 310px;
+	font-size: 25px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+}
+
+#duration {
+	
+	position: absolute;
+	top: 155px;
+	left : 10px;
+	font-size: 25px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+}
+
+#seats_label {
+	
+	position: absolute;
+	top: 210px;
+	left : 10px;
+	font-size: 25px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+}
+
+#seats_booked_now{
+	
+	position: absolute;
+	top: 210px;
+	left : 175px;
+	font-size: 25px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    width: 300px;
+    height: 300px;
+}
+
+#price {
+	
+	position: absolute;
+	top: 260px;
+	left : 10px;
+	font-size: 25px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+}
+
+#insurance {
+	
+	position: absolute;
+	top: 360px;
+	left : 10px;
+	font-size: 22px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+}
+
+#yes_label {
+	
+	position: absolute;
+	top: 400px;
+	left : 30px;
+	font-size: 22px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+}
+
+#insurance_yes {
+	position: absolute;
+	top: 410px;
+	left : 10px;
+}
+
+#no_label {
+	
+	position: absolute;
+	top: 400px;
+	left : 130px;
+	font-size: 22px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+}
+
+#insurance_no {
+	position: absolute;
+	top: 410px;
+	left : 110px;
+}
+
+.bill_panel {
+	
+	position: absolute;
+	top: 50px;
+	left: 650px;
+	width: 300px;
+	height: 300px;
+	background-color:  rgb(77, 77, 77);
+	border-radius: 30px;
+}
+
+#tc, #sc, #cc, #is {
+	position: relative;
+	top: 50px;
+	left : 10px;
+	font-size: 25px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    color:white;
+}
+
+#ans_tc, #ans_sc, #ans_cc, #ans_is {
+	position: relative;
+	float:right;
+	top: 25px;
+	left : -20x;
+	font-size: 25px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    color: #ffc400;
+}
+
+#final {
+	position: relative;
+	top: 150px;
+	left : 10px;
+	font-size: 25px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    color:white;
+}
+
+#ans_final {
+	position: relative;
+	float:right;
+	top: 120px;
+	left : -20x;
+	font-size: 25px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    color: #ffc400;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
