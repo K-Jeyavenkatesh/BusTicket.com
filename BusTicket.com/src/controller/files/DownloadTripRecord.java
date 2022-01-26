@@ -132,20 +132,14 @@ public class DownloadTripRecord extends HttpServlet {
 		String name = "triprecord.pdf";
 		String paths = getServletContext().getRealPath("/"+"files"+File.separator+name);
 		
-		//C:\Users\DELL\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\PdfViewer\files\abc.pdf
 		response.setContentType("APPLICATION/OCTET-STREAM");
-		
 		response.setHeader("Content-Disposition", "attachment; filename=\""+name+"\"");
 			FileInputStream ins = new FileInputStream(paths);
-			//DataInputStream iii = new DataInputStream(ins);
-			//System.out.println(ins);
-			int i ;
+			int i;
 			while((i=ins.read()) != -1) {
-				
 				out.write(i);
 			}
 			ins.close();
-		
 			out.close();
 	}
 }

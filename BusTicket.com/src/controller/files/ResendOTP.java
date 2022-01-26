@@ -20,7 +20,6 @@ public class ResendOTP extends HttpServlet {
 		Passenger passenger = (Passenger) session.getAttribute("passenger");
 		int otp = new OTPGenerator().OTPGenerator(passenger.getEmail());
 		session.setAttribute("otp", otp);
-		System.out.println("Called");
+		
 	}
-
 }

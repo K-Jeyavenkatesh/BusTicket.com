@@ -45,9 +45,7 @@ public class ETicket extends HttpServlet {
 		long pnr = (long) session.getAttribute("pnr");
 		
 		Ticket tickets = new TicketDaoImpl().getTicket(pnr+"");
-		
-		
-		///////////////
+
 		Document doc = new Document(); 
 		String path = "";
 		try {  
@@ -78,11 +76,6 @@ public class ETicket extends HttpServlet {
 			doc.add(new Paragraph("Additional Driver Phone : "+bus_details.getAdditionalDriverPhone())); 
 			doc.add(new Paragraph("       ")); 
 			
-			/*String[] emailids = stringTo(travel_info.getPassengerEmailIds()).split(" ");
-			String[] names = stringTo(travel_info.getPassengerNames()).split(" ");
-			String[] seats = stringTo(travel_info.getBusSeatings()).split(" ");
-			String[] boards = stringTo(travel_info.getPassengerBoardings()).split(" ");
-			String[] drops = stringTo(travel_info.getPassengerDroppings()).split(" ");*/
 			int limit = arr.size();
 			PdfPTable table = new PdfPTable(6);
             table.addCell("NAME");
@@ -120,20 +113,14 @@ public class ETicket extends HttpServlet {
 		String name = "e-ticket.pdf";
 		String paths = getServletContext().getRealPath("/"+"files"+File.separator+name);
 		
-		//C:\Users\DELL\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\PdfViewer\files\abc.pdf
 		response.setContentType("APPLICATION/OCTET-STREAM");
-		
 		response.setHeader("Content-Disposition", "attachment; filename=\""+name+"\"");
 			FileInputStream ins = new FileInputStream(paths);
-			//DataInputStream iii = new DataInputStream(ins);
-			//System.out.println(ins);
-			int i ;
+			int i;
 			while((i=ins.read()) != -1) {
-				
 				out.write(i);
 			}
 			ins.close();
-		
 			out.close();
 	}
 }

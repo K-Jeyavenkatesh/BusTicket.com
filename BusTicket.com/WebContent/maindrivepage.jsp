@@ -68,20 +68,12 @@
 		<div class="main">
 			<div class="navbar">
                 <div class="icon">
-                    <h2 class="logo"><a href="#">BusTicket.com</a></h2>
+                    <h2 class="logo"><a href="index.html">BusTicket.com</a></h2>
                 </div>
                 <div class="menu">
                     <ul>
                         <li><a href="#" style="padding: 14px 20px;">HOME</a></li>
-                        <div class="dropdown">
-						    <button class="dropbtn">EDIT 
-						      <i class="fa fa-caret-down"></i>
-						    </button>
-						    <div class="dropdown-content">
-						      <a href="#">BUS DRIVER</a>
-						      <a href="#">BUS DETAILS</a>
-						    </div>
-						  </div>
+                        
                         <div class="dropdown">
 						    <button class="dropbtn">VIEW 
 						      <i class="fa fa-caret-down"></i>
@@ -198,7 +190,7 @@
 																									border: none;
 																									border-radius: 10px;">
            		</form>
-           		
+           		<img src="VIEW/CSS/IMAGES/favicon.png" style="margin-top: 150px;margin-left: 120px;">
            		
             </div>
              <div class="mainpanel">

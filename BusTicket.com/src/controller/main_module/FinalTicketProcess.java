@@ -14,9 +14,7 @@ import javax.servlet.http.HttpSession;
 
 import model.BusDetails;
 import model.Passenger;
-import model.Ticket;
 import model.TravelInformation;
-import service.TicketDaoImpl;
 
 @WebServlet("/FinalTicketProcess")
 public class FinalTicketProcess extends HttpServlet {

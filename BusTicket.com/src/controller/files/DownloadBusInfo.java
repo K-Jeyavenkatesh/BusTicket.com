@@ -14,7 +14,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import service.BusDriveManagerDaoImpl;
-import service.BusDriverDaoImpl;
 
 @WebServlet("/DownloadBusInfo")
 public class DownloadBusInfo extends HttpServlet {
@@ -69,20 +68,14 @@ public class DownloadBusInfo extends HttpServlet {
 		
 		String path = getServletContext().getRealPath("/"+"files"+File.separator+name);
 		
-		//C:\Users\DELL\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\PdfViewer\files\abc.pdf
 		response.setContentType("APPLICATION/OCTET-STREAM");
-		
 		response.setHeader("Content-Disposition", "attachment; filename=\""+name+"\"");
 			FileInputStream ins = new FileInputStream(path);
-			//DataInputStream iii = new DataInputStream(ins);
-			//System.out.println(ins);
-			int i ;
+			int i;
 			while((i=ins.read()) != -1) {
-				
 				out.write(i);
 			}
 			ins.close();
-		
 			out.close();
 	}
 }

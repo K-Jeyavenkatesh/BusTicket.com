@@ -12,7 +12,7 @@ import javax.mail.internet.MimeMessage;
 
 class Mailer{  
     public static boolean send(String from,String password,String to,String sub,String msg){  
-    	System.out.println("inside send");
+   
           Properties props = new Properties();    
           props.put("mail.smtp.host", "smtp.gmail.com");    
           props.put("mail.smtp.socketFactory.port", "465");    
@@ -26,7 +26,6 @@ class Mailer{
 	        	   return new PasswordAuthentication(from,password);  
 	           }    
           });    
-          System.out.println("outside try");
             
           try {    
            MimeMessage message = new MimeMessage(session);    
@@ -50,12 +49,10 @@ public class Gmail {
 	public boolean Gmail(String from, String to, String password, String title, String message) {   
 	
 		return Mailer.send(from,password,to,title,message);  
-		     //change from mail, password , to mail, title and message 
+		  
 		}   
 	
 	public static void main(String[] args) {
 		new Gmail().Gmail("19euit065@skcet.ac.in", "jeyavenkatesh9@gmail.com", "19euit065skcet@KJV9", "Testing", "Success");
 	}
 }
-
-

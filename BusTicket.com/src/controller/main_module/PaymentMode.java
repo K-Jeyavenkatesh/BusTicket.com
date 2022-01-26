@@ -14,9 +14,6 @@ import javax.servlet.http.HttpSession;
 import controller.files.OTPGenerator;
 import model.Passenger;
 
-/**
- * Servlet implementation class PaymentMode
- */
 @WebServlet("/PaymentMode")
 public class PaymentMode extends HttpServlet {
 	

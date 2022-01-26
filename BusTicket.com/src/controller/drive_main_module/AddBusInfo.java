@@ -32,7 +32,7 @@ public class AddBusInfo extends HttpServlet {
 		String ownername = request.getParameter("ownername");
 		String owneremailid = request.getParameter("owneremail");
 		String ownerphoneno = request.getParameter("ownerphone");
-		String travelsagency = /*admin.getTravelsName()*/"India travels";
+		String travelsagency = admin.getTravelsName();
 
 		Part rcbook = request.getPart("rcbook");
 		Part insurance = request.getPart("insurance");
@@ -67,7 +67,7 @@ public class AddBusInfo extends HttpServlet {
         businfo.setFitness(bytesfitness);
         
         boolean status = new BusDriveManagerDaoImpl().addBusInfo(businfo);
-        /*if(status) {
+        if(status) {
         	out.println("<script type=\"text/javascript\">");
 			out.println("alert('Successfully Registered !!!');");
 			out.println("location='maindrivepage.jsp';");
@@ -75,9 +75,8 @@ public class AddBusInfo extends HttpServlet {
         } else {
         	out.println("<script type=\"text/javascript\">");
 			out.println("alert('Something Error. Try Again');");
-			out.println("location='maindrivepage.jsp';");
+			out.println("location='addbusinfo.jsp';");
 			out.println("</script>");
-        }*/
-        out.println(status);
+        }
 	}
 }

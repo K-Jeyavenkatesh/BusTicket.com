@@ -63,8 +63,6 @@ public class SeatbookingToAddPassenger extends HttpServlet {
 			PassengerBookingHistoryDao history_obj = new PassengerBookingHistoryDaoImpl();
 			history_obj.insertPassengerToHistory(history);
 				
-				
-			
 			RequestDispatcher rd=request.getRequestDispatcher("addpassengerlist.jsp");    
 			rd.forward(request, response);
 		}

@@ -7,13 +7,9 @@ import java.util.regex.Pattern;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import javax.swing.JOptionPane;
-
 import model.Passenger;
 import service.PassengerDaoImpl;
 
@@ -60,7 +56,7 @@ public class SignUp extends HttpServlet {
 			passenger.setEmail(emailid);
 			passenger.setPassword(password);
 			String status = new PassengerDaoImpl().registerPassenger(passenger);
-			//System.out.println(status);
+		
 			if(status.equals("success")) {
 				out.println("<script type=\"text/javascript\">");
 				out.println("alert('Registered Successfully !!');");

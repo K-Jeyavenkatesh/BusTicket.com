@@ -134,7 +134,7 @@ public class AddBusTrip extends HttpServlet {
 		String date = request.getParameter("date");
 		String modifiedDate = date.substring(8,10)+"."+date.substring(5,7)+"."+date.substring(0,4);
 		System.out.println(modifiedDate);
-		busdetails.setDate(modifiedDate); //2022-01-20 modify that to 20.01.2022
+		busdetails.setDate(modifiedDate); 
 		busdetails.setBusAirCondition(request.getParameter("air"));
 		busdetails.setBusType(request.getParameter("seattype"));
 		

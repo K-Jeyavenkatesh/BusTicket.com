@@ -3,11 +3,6 @@ package controller.drive_main_module;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintWriter;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
@@ -19,9 +14,7 @@ import javax.servlet.http.Part;
 
 import model.BusDriveAdmin;
 import model.BusDriver;
-import service.BusDriveManagerDaoImpl;
 import service.BusDriverDaoImpl;
-import service.DBConnection;
 
 @WebServlet("/AddBusDriver")
 @MultipartConfig(maxFileSize = 16177215)
@@ -73,7 +66,7 @@ public class AddBusDriver extends HttpServlet {
         } else {
         	out.println("<script type=\"text/javascript\">");
 			out.println("alert('Something Error. Try Again');");
-			out.println("location='maindrivepage.jsp';");
+			out.println("location='addbusdriver.jsp';");
 			out.println("</script>");
         }
 	}

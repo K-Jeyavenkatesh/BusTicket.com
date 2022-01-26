@@ -30,7 +30,6 @@ public class TicketProvider extends HttpServlet {
 		ArrayList<TravelInformation> arr = new ArrayList<TravelInformation>();
 		for(int i = 0; i < seat_no.length; i++) {
 			
-			
 			TravelInformation travel = new TravelInformation();
 			travel.setJourneyID((String)session.getAttribute("journeyID"));
 			System.out.println(travel.getJourneyID());

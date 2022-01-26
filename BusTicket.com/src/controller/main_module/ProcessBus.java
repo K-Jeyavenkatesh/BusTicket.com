@@ -23,7 +23,6 @@ public class ProcessBus extends HttpServlet {
 		String from = request.getParameter("journey_from");
 		String to = request.getParameter("journey_to");
 		
-		System.out.println("date-"+date+"-"+from+"-"+to);
 		HttpSession session = request.getSession();
 		ArrayList<BusDetails> buses = null;
 		

@@ -14,10 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import model.BusDriveAdmin;
-import model.Passenger;
-import service.BusDriveManagerDao;
 import service.BusDriveManagerDaoImpl;
-import service.PassengerDaoImpl;
 
 @WebServlet("/DriveAgencyLogin")
 public class DriveAgencyLogin extends HttpServlet {

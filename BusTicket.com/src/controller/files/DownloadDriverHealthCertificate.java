@@ -5,20 +5,13 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.PrintWriter;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import service.BusDriveManagerDaoImpl;
 import service.BusDriverDaoImpl;
 
 @WebServlet("/DownloadDriverHealthCertificate")
@@ -29,7 +22,6 @@ public class DownloadDriverHealthCertificate extends HttpServlet {
 		
 		
 			try {
-				
 				String licenceno = request.getParameter("licenceno");
 				byte[] bt = new BusDriverDaoImpl().PdfFromDatabase(licenceno);
 				String name = "driverhealthcertificate.pdf";
@@ -40,7 +32,6 @@ public class DownloadDriverHealthCertificate extends HttpServlet {
 				for (byte b: bt) {
 				    dout.write(b);  
 				} 
-	
 				dout.flush();
 				fout.close();
 			}
@@ -53,20 +44,14 @@ public class DownloadDriverHealthCertificate extends HttpServlet {
 			String name = "driverhealthcertificate.pdf";
 			String path = getServletContext().getRealPath("/"+"files"+File.separator+name);
 			
-			//C:\Users\DELL\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\PdfViewer\files\abc.pdf
 			response.setContentType("APPLICATION/OCTET-STREAM");
-			
 			response.setHeader("Content-Disposition", "attachment; filename=\""+name+"\"");
 				FileInputStream ins = new FileInputStream(path);
-				//DataInputStream iii = new DataInputStream(ins);
-				//System.out.println(ins);
-				int i ;
+				int i;
 				while((i=ins.read()) != -1) {
-					
 					out.write(i);
 				}
 				ins.close();
-			
 				out.close();
 	}
 }

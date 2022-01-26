@@ -14,7 +14,6 @@ import javax.servlet.http.HttpSession;
 
 import model.BusDetails;
 import model.Passenger;
-import model.PassengerBookingHistory;
 import service.TravelInformationDaoImpl;
 
 @WebServlet("/MainToSeatbooking")
