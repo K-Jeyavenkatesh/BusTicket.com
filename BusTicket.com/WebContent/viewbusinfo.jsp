@@ -39,8 +39,89 @@
     			font-size: 20px;
         	}
         	
+        	#bus_nol {
+        		position: absolute;
+        		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    			font-weight: bold;
+    			font-size: 20px;
+    			left: 150px;
+    			top: 275px;
+        	}
         	
+        	#ans_bus_nol {
+        		position: absolute;
+        		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    			font-weight: bold;
+    			font-size: 20px;
+    			left: 150px;
+    			top: 300px;
+    			width: 300px;
+    			height: 30px;
+        	}
+        	
+        	#filterApplyinfo {
+        		position: absolute;
+        		height: 40px;
+        		width: 100px;
+        		top: 450px;
+        		left: 350px;
+        		background-color: #ffc400;
+        		color: rgb(77,77,77);
+        		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    			font-weight: bold;
+    			font-size: 20px;
+        	}
+        	
+        	#bus_no , #bus_model, #bus_ownername, #bus_owneremailid, #bus_ownerphone, #bus_travelname{
+        		position: relative;
+        		top: 20px;
+        		margin: 20px;
+        	}
+        	
+        	#ans_bus_no , #ans_bus_model, #ans_bus_ownername, #ans_bus_owneremailid, #ans_bus_ownerphone, #ans_bus_travelname{
+        		position: relative;
+        		top: 20px;
+        		width: 400px;
+        		height: 30px;
+        		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    			font-weight: bold;
+    			font-size: 20px;
+        	}
+        	
+        	#ans_bus_no {
+        		left: 100px;
+        	}
+        	#ans_bus_model {
+        		left: 70px;
+        	}
+        	#ans_bus_ownername {
+        		left: 52px;
+        	}
+        	#ans_bus_owneremailid {
+        		left: 30px;
+        	}
+        	#ans_bus_ownerphone {
+        		left: 48px;
+        	}
+        	#ans_bus_travelname {
+        		left: -13px;
+        	}
+        	
+        	#rc, #insu, #puc, #fit {
         		
+        		height: 50px;
+        		width: 300px;
+        		top: 450px;
+        		left: 350px;
+        		background-color: #ffc400;
+        		color: rgb(77,77,77);
+        		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    			font-weight: bold;
+    			font-size: 20px;
+    			border-radius: 10px;
+    			border: 5px solid rgb(77,77,77);
+    			margin: 10px;
+    			margin-left: 250px;
         	}
         </style>
 	</head>
@@ -89,39 +170,39 @@
             } %>
             <div class="toppanel">
             	<form action="ViewBusInfo" method="POST">
-            	<label id="bus_no" for="ans_bus_no">Bus No</label>
-            	<input type="text" id="ans_bus_no" name="businfo"><br/>
-            	<input type="submit" value="APPLY">
+            	<label id="bus_nol" for="ans_bus_nol">Bus No</label>
+            	<input type="text" id="ans_bus_nol" name="businfo"><br/>
+            	<input type="submit" id="filterApplyinfo" value="APPLY">
             	</form>
             </div>
             <div class="maindownpanel">
-            	<label id="bus_no" for="ans_bus_no">Bus No</label>
-            	<input type="text" id="ans_bus_no" name="bus_no" value="<%=businfo.getBusno() %>" disabled="disabled"><br/>
+            	<label id="bus_no" for="ans_bus_no">Bus No </label>
+            	<input type="text" id="ans_bus_no" name="bus_no" value="<%=businfo.getBusno() %>" disabled="disabled"><br/><br/>
             	<label id="bus_model" for="ans_bus_model">Bus Model</label>
-            	<input type="text" id="ans_bus_model" name="bus_model" value="<%=businfo.getBusmodel()%>" disabled="disabled"><br/>
+            	<input type="text" id="ans_bus_model" name="bus_model" value="<%=businfo.getBusmodel()%>" disabled="disabled"><br/><br/>
             	<label id="bus_ownername" for="ans_bus_ownername">Owner Name</label>
-            	<input type="text" id="ans_bus_ownername" name="bus_ownername" value="<%=businfo.getOwnername() %>" disabled="disabled"><br/>
+            	<input type="text" id="ans_bus_ownername" name="bus_ownername" value="<%=businfo.getOwnername() %>" disabled="disabled"><br/><br/>
             	<label id="bus_owneremailid" for="ans_bus_owneremailid">Owner Email ID</label>
-            	<input type="text" id="ans_bus_owneremailid" name="bus_owneremailid" value="<%=businfo.getOwneremail() %>" disabled="disabled"><br/>
+            	<input type="text" id="ans_bus_owneremailid" name="bus_owneremailid" value="<%=businfo.getOwneremail() %>" disabled="disabled"><br/><br/>
             	<label id="bus_ownerphone" for="ans_bus_ownerphone">Owner Phone</label>
-            	<input type="text" id="ans_bus_ownerphone" name="bus_ownerphone" value="<%=businfo.getOwnerphone() %>" disabled="disabled"><br/>
+            	<input type="text" id="ans_bus_ownerphone" name="bus_ownerphone" value="<%=businfo.getOwnerphone() %>" disabled="disabled"><br/><br/>
             	<label id="bus_travelname" for="ans_bus_travelname">Travel Agency Name</label>
-            	<input type="text" id="ans_bus_travelname" name="bus_travelname" value="<%=businfo.getTravelsagency() %>" disabled="disabled"><br/>
+            	<input type="text" id="ans_bus_travelname" name="bus_travelname" value="<%=businfo.getTravelsagency() %>" disabled="disabled"><br/><br/>
             	<form action="DownloadBusInfo" method="post">
             		<input type="hidden" name="rcbook" value="<%=businfo.getBusno() %>">
-            		<input type="submit" value="Download RcBook">
+            		<input type="submit" id="rc" value="Download RcBook">
             	</form>
             	<form action="DownloadBusInfo" method="post">
             		<input type="hidden" name="insurance" value="<%=businfo.getBusno() %>">
-            		<input type="submit" value="Download Insurance">
+            		<input type="submit" id="insu" value="Download Insurance">
             	</form>
             	<form action="DownloadBusInfo" method="post">
             		<input type="hidden" name="puccert" value="<%=businfo.getBusno() %>">
-            		<input type="submit" value="Download PUC Certificate">
+            		<input type="submit" id="puc" value="Download PUC Certificate">
             	</form>
             	<form action="DownloadBusInfo" method="post">
             		<input type="hidden" name="fitness" value="<%=businfo.getBusno() %>">
-            		<input type="submit" value="Download Fitness Certificate">
+            		<input type="submit" id="fit" value="Download Fitness Certificate">
             	</form>
             	
             </div>

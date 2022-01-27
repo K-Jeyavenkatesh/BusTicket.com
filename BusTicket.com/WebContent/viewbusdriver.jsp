@@ -148,6 +148,46 @@
         		cursor: pointer;
         		
         	}
+        	
+        	#licence_no, #phone_no {
+        		position: absolute;
+        		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    			font-weight: bold;
+    			font-size: 20px;
+    			left: 150px;
+    			top: 275px;
+        	}
+        	
+        	#ans_licence_no, #ans_phone_no {
+        		position: absolute;
+        		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    			font-weight: bold;
+    			font-size: 20px;
+    			left: 150px;
+    			top: 300px;
+    			width: 300px;
+    			height: 30px;
+        	}
+        	
+        	#phone_no {
+        		top: 350px;
+        	}
+        	
+        	#ans_phone_no {
+        		top: 375px;
+        	}
+        	#filterApplyinfo {
+        		position: absolute;
+        		height: 40px;
+        		width: 100px;
+        		top: 450px;
+        		left: 350px;
+        		background-color: #ffc400;
+        		color: rgb(77,77,77);
+        		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    			font-weight: bold;
+    			font-size: 20px;
+        	}
         </style>
 	</head>
 	<body>
@@ -197,9 +237,10 @@
             	<form action="ViewBusDriver" method="POST">
             	<label id="licence_no" for="ans_licence_no">Licence No</label>
             	<input type="text" id="ans_licence_no" name="licence_no">
+            	<h4 style="position:absolute;top:335px;left:120px;">OR</h4>
             	<label id="phone_no" for="ans_phone_no">Phone No</label>
             	<input type="text" id="ans_phone_no" name="phone_no">
-            	<input type="submit" value="APPLY">
+            	<input type="submit" id="filterApplyinfo" value="APPLY">
             	</form>
             </div>
             <div class="maindownpanel">

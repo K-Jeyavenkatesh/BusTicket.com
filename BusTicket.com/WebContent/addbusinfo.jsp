@@ -19,6 +19,41 @@
 	        		opacity: 0.9;
 	        		border-radius: 20px;
 	        		overflow-y: auto;
+	        		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    				font-weight: bold;
+    				font-size: 20px;
+	        	}
+	        	
+	        	#busno, #busmodelname, #ownername, #ownerphone, #owneremail, #rcbook, #insurance, #PUCCertificate, #fitness {
+	        		margin-left: 150px;
+	        	}
+	        	
+	        	#ans_busno, #ans_busmodelname, #ans_ownername, #ans_ownerphone, #ans_owneremail, #ans_rcbook, #ans_insurance, #ans_PUCCertificate, #ans_fitness {
+	        		margin-left: 150px;
+	        		margin-bottom: 15px;
+	        		height: 30px;
+	        		width: 400px;
+	        		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    				font-weight: bold;
+    				font-size: 15px;
+	        	}
+	        	
+	        	#submit_id {
+        		
+	        		height: 50px;
+	        		width: 200px;
+	        		top: 450px;
+	        		left: 300px;
+	        		background-color: #ffc400;
+	        		color: rgb(77,77,77);
+	        		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	    			font-weight: bold;
+	    			font-size: 20px;
+	    			border-radius: 10px;
+	    			border: none;
+	    			margin: 10px;
+	    			margin-left: 450px;
+	    			margin-top: -70px;
 	        	}
 	        </style>
 	</head>
@@ -63,25 +98,25 @@
             </div>
             <div class="blockpanel">
             <form action="AddBusInfo" method="post" enctype="multipart/form-data">
-            	<label id="busno" for="ans_busno">Bus Number</label>
+            	<label id="busno" for="ans_busno">Bus Number</label><br/>
 	         	<input type="text" id="ans_busno" name="busno"><br/>
-	         	<label id="busmodelname" for="ans_busmodelname">Bus Model</label>
+	         	<label id="busmodelname" for="ans_busmodelname">Bus Model</label><br/>
 	         	<input type="text" id="ans_busmodelname" name="busmodelname"><br/>
-	         	<label id="ownername" for="ans_ownername">Owner Name</label>
+	         	<label id="ownername" for="ans_ownername">Owner Name</label><br/>
 	         	<input type="text" id="ans_ownername" name="ownername"><br/>
-	         	<label id="owneremail" for="ans_owneremail">Owner Email</label>
+	         	<label id="owneremail" for="ans_owneremail">Owner Email</label><br/>
 	         	<input type="text" id="ans_owneremail" name="owneremail"><br/>
-	         	<label id="ownerphone" for="ans_ownerphone">Owner Phone No</label>
+	         	<label id="ownerphone" for="ans_ownerphone">Owner Phone No</label><br/>
 	         	<input type="text" id="ans_ownerphone" name="ownerphone"><br/>
-	         	<label id="rcbook" for="ans_rcbook">Registration Certificate pdf</label>
+	         	<label id="rcbook" for="ans_rcbook">Registration Certificate pdf</label><br/>
 	         	<input type="file" id="ans_rcbook" accept="application/pdf" name="rcbook"><br/>
-	         	<label id="insurance" for="ans_insurance">Insurance pdf</label>
+	         	<label id="insurance" for="ans_insurance">Insurance pdf</label><br/>
 	         	<input type="file" id="ans_insurance" accept="application/pdf" name="insurance"><br/>
-	         	<label id="PUCCertificate" for="ans_PUCCertificate">PUC Certificate pdf</label>
+	         	<label id="PUCCertificate" for="ans_PUCCertificate">PUC Certificate pdf</label><br/>
 	         	<input type="file" id="ans_PUCCertificate" accept="application/pdf" name="PUCCertificate"><br/>
-	         	<label id="fitness" for="ans_fitness">Fitness pdf</label>
+	         	<label id="fitness" for="ans_fitness">Fitness pdf</label><br/>
 	         	<input type="file" id="ans_fitness" accept="application/pdf" name="fitness"><br/>
-	         	<input type="submit">
+	         	<input type="submit" id="submit_id" value="REGISTER">
 	         </form>
             </div>
          </div>
