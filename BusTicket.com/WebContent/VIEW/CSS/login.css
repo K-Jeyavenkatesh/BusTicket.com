@@ -182,3 +182,12 @@ a{
   .loginBtn--google:focus {
     background: #E74B37;
   }
+  
+  #passSubmit {
+  	position: absolute;
+	top: 300px;
+	left: 150px;
+	border: none;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 15px;
+  }

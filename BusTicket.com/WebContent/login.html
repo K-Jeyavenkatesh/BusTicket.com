@@ -5,9 +5,23 @@
         <title>BusTicket.com</title>
         <link rel="stylesheet" href="VIEW/CSS/login.css">
         <link rel="icon" type="image/png" href="VIEW/CSS/IMAGES/favicon.png">
+        <style>
+        	 #passSubmit {
+			  	position: absolute;
+			  	top: 300px;
+			  	left: 150px;
+			  	border: none;
+			  	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+			  	font-size: 15px;
+			  }
+        </style>
     </head>
     <body>
         <script>
+        	function loadPassword() {
+        		let p = prompt("Please enter your Email ID:", "");
+        			  document.getElementById("pass").value = p;  
+        	}
             function showpassword() {
                 var temp = document.getElementById("input_text2");
                 if (temp.type === "password") {
@@ -29,9 +43,13 @@
                 <br/><br/>
                 <input type="checkbox" id="show_password" name="show_password" onclick="showpassword()">
                 <span id="label_show">show password</span><br>
-                <a id="forget_password" href="www.google.com">Forget Password?</a>
+                
                 <input id="submit_login" type="submit" value="LOGIN">
             </form>
+            <form id="forgetForm" action="ForgetPasswordPassenger" method="post">
+            		<input type="hidden" id="pass" name="passEmail" value="">
+            		<input type="submit" id="passSubmit" onclick="loadPassword()" value="Forget Password?">
+            	</form>
             <hr id="line1"><span id="or">OR</span><hr id="line2">
             <button class="loginBtn loginBtn--facebook">
                 Login with Facebook
@@ -39,6 +57,9 @@
             <button class="loginBtn loginBtn--google">
                 Login with Google
             </button>
+            <form id="forgetForm" action="ForgetPasswordPassenger" method="post">
+            	<input type="hidden" name="passEmail" value="">
+            </form>
         </div>
     </body>
 </html>

@@ -347,6 +347,23 @@ public class BusDriveManagerDaoImpl implements BusDriveManagerDao{
 		return businfo;
 	}
 
+	@Override
+	public String forgetPassword(String email) {
+		
+		String password = null;
+		try{
+			
+			Connection conn = new DBConnection().DBConnection();
+			Statement st = conn.createStatement();
+			ResultSet r = st.executeQuery("select password from bustravelagency where emailid=\""+email+"\";");
+			r.next();
+			password = r.getString(1);
+		} catch(Exception e) {
+			
+		}
+		return password;
+	}
+
 	/*public static void main(String[] args) {
 		new BusDriveManagerDaoImpl().getAllHistory();
 	}*/

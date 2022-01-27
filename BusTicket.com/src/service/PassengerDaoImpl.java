@@ -90,4 +90,21 @@ public class PassengerDaoImpl implements PassengerDao{
 		
 	}
 
+	@Override
+	public String forgetPassword(String email) {
+		
+		String password = null;
+		try{
+			
+			Connection conn = new DBConnection().DBConnection();
+			Statement st = conn.createStatement();
+			ResultSet r = st.executeQuery("select password from passenger where emailid=\""+email+"\";");
+			r.next();
+			password = r.getString(1);
+		} catch(Exception e) {
+			
+		}
+		return password;
+	}
+
 }

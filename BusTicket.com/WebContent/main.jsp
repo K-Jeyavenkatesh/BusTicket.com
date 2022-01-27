@@ -54,7 +54,7 @@
                     <ul>
                         <li><a href="index.html">HOME</a></li>
                         <li><a href="#">ABOUT</a></li>
-                        <li><a href="#">SERVICE</a></li>
+                        <li><a href="PassengerHistory">HISTORY</a></li>
                         <div class="dropdown">
 						    <button class="dropbtn">ACCOUNT 
 						      <i class="fa fa-caret-down"></i>

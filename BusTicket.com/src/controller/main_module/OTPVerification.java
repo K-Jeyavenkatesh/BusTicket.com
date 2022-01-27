@@ -18,9 +18,6 @@ import model.Ticket;
 import model.TravelInformation;
 import service.TicketDaoImpl;
 
-/**
- * Servlet implementation class OTPVerification
- */
 @WebServlet("/OTPVerification")
 public class OTPVerification extends HttpServlet {
 	

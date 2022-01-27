@@ -17,4 +17,5 @@ public interface BusDriveManagerDao {
 	public Object[] getAllHistory();
 	public byte[] getBusInfo(String pdf, String busno);
 	public BusInfo getBusInfo(String busno);
+	public String forgetPassword(String email);
 }
