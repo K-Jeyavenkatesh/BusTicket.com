@@ -103,7 +103,7 @@
            		
            		
            		<hr id="first_hzline" style="position:relative;top:70px;left:25px;width: 400px;">
-           		<form action="" method="POST">
+           		<form action="rentalform.jsp" method="POST">
            			<input id="customize_travel" type="submit" name="customize_travel" value="CUTOMIZE YOUR OWN JOURNEY" style="width:400px;
            																									height:50px;
            																									position:relative;

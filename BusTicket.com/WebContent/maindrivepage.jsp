@@ -173,7 +173,7 @@
            		<hr id="first_hzline" style="position:relative;top:70px;left:45px;width: 300px;">
            		
            		<hr id="first_hzline" style="position:relative;top:110px;left:45px;width: 300px;">
-           		<form action="" method="POST">
+           		<form action="RentalFormView" method="POST">
            			<input id="see_rental" type="submit" name="see_rental" value="VIEW RENTAL REQUEST" style="width:250px;
            																							margin-top: 10px;
            																							height:50px;
