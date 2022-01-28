@@ -30,7 +30,7 @@
 	<body>
 	<script>
 		function logout() {
-			<% session.invalidate();%>
+			
 		}
 	</script>
 		<div class="main">

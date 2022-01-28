@@ -7,8 +7,103 @@
         <link rel="icon" type="image/png" href="VIEW/CSS/IMAGES/favicon.png">
         <style>
         	.mainpanel {
-        		
+        		position: absolute;
+        		top: 50px;
+        		left: 100px;
+        		width: 1300px;
+        		height: 650px;
+        		background-color: white;
+        		opacity: 0.9;
+        		border-radius: 20px;
         	}
+        	#tra_name, #tra_ownname, #tra_ownname_email, #tra_ownname_phone, #tra_address, #tra_agency_phone,
+        	#label_field2, #label_field3, #label_field4 {
+        		position: absolute;
+        		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+			  	font-size: 20px;
+			  	top: 20px;
+			  	left: 120px;
+        	}
+        	
+        	#label_field2{
+        	 	left: 750px;
+        	 }
+        	 #label_field3 {
+        	 left: 750px;
+        	 top: 120px;
+        	 }
+        	 #label_field4 {
+        	  left: 750px;
+        	 top: 220px;
+        	 }
+        	
+        	#tra_ownname {
+			  	top: 120px;
+        	}
+        	#tra_ownname_email {
+			  	top: 220px;
+        	}
+        	#tra_ownname_phone {
+			  	top: 320px;
+        	}
+        	#tra_address {
+			  	top: 410px;
+        	}
+        	#tra_agency_phone {
+			  	top: 530px;
+        	}
+        	#ans_tra_name, #ans_tra_ownname, #ans_tra_ownname_email, #ans_tra_ownname_phone, #ans_tra_address, 
+        	#ans_tra_agency_phone, #input_text2, #input_text3, #input_text4 {
+        		position: absolute;
+        		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+			  	font-size: 20px;
+			  	top: 50px;
+			  	left: 120px;
+			  	height: 35px;
+			  	width: 400px;
+        	}
+        	
+        	#ans_tra_ownname {
+			  	top: 150px;
+        	}
+        	#ans_tra_ownname_email {
+			  	top: 250px;
+        	}
+        	 #input_text2{
+        	 	left: 750px;
+        	 }
+        	 #input_text3 {
+        	 left: 750px;
+        	 top: 150px;
+        	 }
+        	  #input_text4 {
+        	  left: 750px;
+        	 top: 250px;
+        	 }
+        	#ans_tra_ownname_phone {
+			  	top: 350px;
+        	}
+        	#ans_tra_address {
+			  	top: 440px;
+			  	height: 70px;
+        	}
+        	#ans_tra_agency_phone {
+			  	top: 560px;
+        	}
+        	#submit_id {
+        			position: absolute;
+	        		height: 50px;
+	        		width: 200px;
+	        		top: 550px;
+	        		left: 850px;
+	        		background-color: #ffc400;
+	        		color: rgb(77,77,77);
+	        		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	    			font-weight: bold;
+	    			font-size: 20px;
+	    			border-radius: 10px;
+	    			border: none;	
+	        	}
         </style>
 	</head>
 	<body>
@@ -36,17 +131,17 @@
 		</script>
 		<div class="mainpanel">
 			<form action="DriveRegisterAgency" method="post" >
-				<label id="tra_name">Travels Name</label>
+				<label id="tra_name">Travels Name</label><br/>
 				<input type="text" id="ans_tra_name" name="travels_name"/><br/>
-				<label id="tra_ownname">Travels Owner Name</label>
+				<label id="tra_ownname">Travels Owner Name</label><br/>
 				<input type="text" id="ans_tra_ownname" name="travels_owner_name"><br/>
-				<label id="tra_ownname_email">Owner's Email ID</label>
+				<label id="tra_ownname_email">Owner's Email ID</label><br/>
 				<input type="email" id="ans_tra_ownname_email" name="travels_owner_name_emailid"><br/>
-				<label id="tra_ownname_phone">Owner's Phone Number</label>
+				<label id="tra_ownname_phone">Owner's Phone Number</label><br/>
 				<input type="number" id="ans_tra_ownname_phone" name="travels_owner_name_phone"><br/>
-				<label id="tra_address">Travel Agency Address</label>
-				<input type="textarea" rows="3" cols="1" id="ans_tra_address" name="travels_address"><br/>
-				<label id="tra_agency_phone">Travel Agency Phone Number</label>
+				<label id="tra_address">Travel Agency Address</label><br/>
+				<textarea rows="3" cols="1" id="ans_tra_address" name="travels_address"></textarea>
+				<label id="tra_agency_phone">Travel Agency Phone Number</label><br/>
 				<input type="number" id="ans_tra_agency_phone" name="travels_agency_phone"><br/>
 				<label id="label_field2">EMAIL ID</label><br/>
 				<input id="input_text2" type="email" name="emailid" placeholder="Type E-Mail ID here..." required><br/><br/>
@@ -58,7 +153,7 @@
 	            <label id="label_field4">CONFORM PASSWORD</label><br/>
 	            <input id="input_text4" type="password" name="conform_password" placeholder="Type Password again" required><br/><br/>
 			
-				<input type="submit" value="REGISTER">
+				<input type="submit" id="submit_id" value="REGISTER">
 			</form>
 			</div>
 	</body>
