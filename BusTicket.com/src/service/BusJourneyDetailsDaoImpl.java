@@ -1,13 +1,11 @@
 package service;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Date;
 
 import model.BusDetails;
@@ -339,9 +337,6 @@ public class BusJourneyDetailsDaoImpl implements BusJourneyDetailsDao{
 		return result;
 	}
 	
-	public static void main(String[] args) {
-		new BusJourneyDetailsDaoImpl().filterByCurrentDate(null);
-	}
 }
 
 

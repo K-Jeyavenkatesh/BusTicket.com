@@ -127,3 +127,44 @@ ul li a:hover {
 .dropdown:hover .dropdown-content {
    display: block;
 }
+
+.blockpanel{
+        		position: absolute;
+        		margin-top: 50px;
+        		left: 100px;
+        		width:1300px;
+        		height: 600px;
+        		background-color: white;
+        		border-radius: 20px;
+        		opacity: 0.9;
+        		overflow-y; auto;
+        	}
+        	.blockelements {
+        		position: relative;
+        		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    			font-weight: bold;
+    			font-size: 20px;
+        		width: 1250px;
+        		height: 220px;
+        		left: 25px;
+        		color: white;
+        		background-color: rgb(77, 77, 77);
+        		margin-top: 10px;
+        		margin-bottom: 10px; 
+        		border-radius: 20px;
+        	}
+        	#submit_id {
+	        		height: 50px;
+	        		width: 200px;
+	        		margin-bottom: 20px;
+	        		margin-top: -30px;
+	        		margin-left: 1000px;
+	        		background-color: #ffc400;
+	        		color: rgb(77,77,77);
+	        		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	    			font-weight: bold;
+	    			font-size: 20px;
+	    			border-radius: 10px;
+	    			border: none;
+	    			cursor: pointer;	
+	        	}

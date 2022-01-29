@@ -30,12 +30,12 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function(){
-			    var maxField = 20; //Input fields increment limitation
-			    var addButton = $('.add_button'); //Add button selector
-			    var wrapper = $('.field_wrapper'); //Input field wrapper
-			    var x = 1; //Initial field counter is 1
-			    var addButton_r = $('.add_button_r'); //Add button selector
-			    var wrapper_r = $('.field_wrapper_r'); //Input field wrapper
+			    var maxField = 20; 
+			    var addButton = $('.add_button'); 
+			    var wrapper = $('.field_wrapper'); 
+			    var x = 1; 
+			    var addButton_r = $('.add_button_r'); 
+			    var wrapper_r = $('.field_wrapper_r'); 
 			    var y = 1;
 			    $(addButton).click(function(){
 			    	var fieldHTML = '<div><a href="javascript:void(0);" class="remove_button"><img id="imgg" src="VIEW/CSS/IMAGES/remove-icon.png"/></a><input id="first_text" type="text" name="boarding_name['+x+']" value=""/>'+
@@ -43,42 +43,41 @@
 			    	console.log(fieldHTML);
 			    	
 			    	if(x < maxField){ 
-			            x++; //Increment field counter			        
-			            $(wrapper).append(fieldHTML); //Add field html
+			            x++; 			        
+			            $(wrapper).append(fieldHTML); 
 			        }
 			    });
 			    $(addButton_r).click(function(){
 			    	var fieldHTMLr = '<div><a href="javascript:void(0);" class="remove_button_r"><img id="imgg" src="VIEW/CSS/IMAGES/remove-icon.png"/></a><input id="first_text" type="text" name="dropping_name['+y+']" value=""/>'+
-			        '<input id="second_text" type="time" name="dtime_name['+y+']" value=""/></div>'; //New input field html 
+			        '<input id="second_text" type="time" name="dtime_name['+y+']" value=""/></div>'; 
 			    	console.log(fieldHTMLr);
 			    	
 			    	if(y < maxField){ 
-			            y++; //Increment field counter			        
-			            $(wrapper_r).append(fieldHTMLr); //Add field html
+			            y++; 			        
+			            $(wrapper_r).append(fieldHTMLr); 
 			        }
 			    });
 			    
-			    //Once remove button is clicked
 			    $(wrapper).on('click', '.remove_button', function(e){
 			        e.preventDefault();
-			        $(this).parent('div').remove(); //Remove field html
-			        x--; //Decrement field counter
+			        $(this).parent('div').remove(); 
+			        x--; 
 			    });
 			    $(wrapper_r).on('click', '.remove_button_r', function(e){
 			        e.preventDefault();
-			        $(this).parent('div').remove(); //Remove field html
-			        y--; //Decrement field counter
+			        $(this).parent('div').remove(); 
+			        y--; 
 			    });
 			});
 			</script>
 		<div class="main">
             <div class="navbar">
                 <div class="icon">
-                    <h2 class="logo"><a href="#">BusTicket.com</a></h2>
+                    <h2 class="logo"><a href="index.html">BusTicket.com</a></h2>
                 </div>
                 <div class="menu">
                     <ul>
-                        <li><a href="www.google.com">HOME</a></li>
+                        <li><a href="index.html">HOME</a></li>
                         <li><a href="#">ABOUT</a></li>
                         <li><a href="#">SERVICE</a></li>
                         <div class="dropdown">
@@ -87,7 +86,7 @@
 						    </button>
 						    <div class="dropdown-content">
 						      <a href="#">PROFILE</a>
-						      <a href="#">SIGN OUT</a>
+						      <a href="index.html">SIGN OUT</a>
 						    </div>
 						  </div> 
                     </ul>

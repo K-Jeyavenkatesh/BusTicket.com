@@ -7,53 +7,12 @@
 		<title>BusTicket.com</title>
 		<link rel="stylesheet" type="text/css" href="VIEW/CSS/passengerhistory.css">
         <link rel="icon" type="image/png" href="VIEW/CSS/IMAGES/favicon.png">
-        <style>
-        	.mainblock {
-        		position: absolute;
-        		top: 100px;
-        		left: 120px;
-        		width: 1250px;
-        		height: 600px;
-        		background-color: white;
-        		opacity: 0.9;
-        		border-radius: 20px;
-        		overflow-y: auto;
-        	}
-        	
-        	.miniblock {
-        		position: relative;
-        		margin-top: 10px;
-        		left: 25px;
-        		width: 1200px;
-        		height: 50px;
-        		background-color: rgb(77,77,77);
-        		opacity: 0.9;
-        		border-radius: 10px;
-        		overflow-y: auto;
-        	}
-        	
-        	#text {
-        		position: relative;
-        		margin-top: 8px;
-        		width: 1050px;
-        		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-				 transition: 0.4s ease-in-out;
-				font-weight: bold;
-				font-size: 25px;
-				color: white;
-				left: 150px;
-        	}
-        	
-        	#text:hover {
-   				color: #ffc400;
-			}
-        </style>
 	</head>
 	<body>
 		<div class="main">
             <div class="navbar">
                 <div class="icon">
-                    <h2 class="logo"><a href="#">BusTicket.com</a></h2>
+                    <h2 class="logo"><a href="index.html">BusTicket.com</a></h2>
                 </div>
                 <div class="menu">
                     <ul>

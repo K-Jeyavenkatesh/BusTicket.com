@@ -8,74 +8,16 @@
         <link rel="stylesheet" href="VIEW/CSS/reqular.css">
         <link rel="stylesheet" href="VIEW/CSS/rentalform.css">
         <link rel="icon" type="image/png" href="VIEW/CSS/IMAGES/favicon.png">
-        <style>
-        	.mainblockpanel {
-        		position: absolute;
-        		top: 100px;
-        		left: 100px;
-        		width: 1300px;
-        		height: 600px;
-        		background-color: white;
-        		opacity: 0.9;
-        		border-radius: 20px;
-        		overflow-y: auto;
-        		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-			  	font-size: 25px;
-        	}
-        	
-        	#expect_place, #expect_date, #expect_days, #expect_details, #expect_busdetails, 
-        	#user_name, #user_email, #user_phone1, #user_phone2 {
-			  	margin-left: 400px;
-        	}
-        	
-        	#expectPlace, #expectDate, #expectDays, #expectDetails, #username,
-        	#useremail, #userphone1, #userphone2 , #expectbusDetails{
-        		margin-left: 400px;
-        		height: 40px;
-        		width: 500px;
-        		margin-bottom: 20px;
-        		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-			  	font-size: 20px;
-        	}
-        	#expectPlace {
-        		margin-left: 250px;
-        		width: 800px;
-        	}
-        	#expectDate, #expectDays {
-        		width: 200px;
-        	}
-        	#expectbusDetails, #expectDetails {
-    			width: 800px;
-        		height:150px;
-        		margin-left: 250px;
-        		margin-bottom: 20px;
-        		
-        	}
-        	#submit_id {
-	        		height: 50px;
-	        		width: 200px;
-	        		margin-bottom: 20px;
-	        		margin-top: 50px;
-	        		margin-left: 550px;
-	        		background-color: #ffc400;
-	        		color: rgb(77,77,77);
-	        		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-	    			font-weight: bold;
-	    			font-size: 20px;
-	    			border-radius: 10px;
-	    			border: none;	
-	        	}
-        </style>
 	</head>
 	<body>
 		<div class="main">
 			<div class="navbar">
                 <div class="icon">
-                    <h2 class="logo"><a href="#">BusTicket.com</a></h2>
+                    <h2 class="logo"><a href="index.html">BusTicket.com</a></h2>
                 </div>
                 <div class="menu">
                     <ul>
-                        <li><a href="www.google.com">HOME</a></li>
+                        <li><a href="index.html">HOME</a></li>
                         <li><a href="#">ABOUT</a></li>
                         <li><a href="#">SERVICE</a></li>
                         <div class="dropdown">
@@ -83,8 +25,8 @@
 						      <i class="fa fa-caret-down"></i>
 						    </button>
 						    <div class="dropdown-content">
-						      <a href="#">PROFILE</a>
-						      <a href="#">SIGN OUT</a>
+						      <a href="profile.jsp">PROFILE</a>
+						      <a href="index.html">SIGN OUT</a>
 						    </div>
 						  </div> 
                     </ul>

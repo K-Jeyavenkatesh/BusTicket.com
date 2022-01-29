@@ -1,0 +1,45 @@
+.mainpanel {
+	        		position: absolute;
+	        		top: 100px;
+	        		left: 400px;
+	        		height: 600px;
+	        		width: 700px;
+	        		background-color: white;
+	        		border-radius: 20px;
+	        		opacity: 0.9;
+	        		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    				font-weight: bold;
+    				font-size: 20px;
+	        	}
+	        	
+	        	#name, #licno, #emailid, #number, #fphoto, #bphoto, #health {
+	        		margin-left: 150px;
+	        		
+	        	}
+	        	
+	        	#ans_name, #ans_licno, #ans_emailid, #ans_number, #ans_fphoto, #ans_bphoto, #ans_health {
+	        		margin-left: 150px;
+	        		margin-bottom: 20px;
+	        		height: 30px;
+	        		width: 400px;
+	        		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    				font-weight: bold;
+    				font-size: 15px;
+	        	}
+	        	
+	        	#submit_id {
+        		
+	        		height: 50px;
+	        		width: 300px;
+	        		top: 450px;
+	        		left: 300px;
+	        		background-color: #ffc400;
+	        		color: rgb(77,77,77);
+	        		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	    			font-weight: bold;
+	    			font-size: 20px;
+	    			border-radius: 10px;
+	    			border: none;
+	    			margin: 10px;
+	    			margin-left: 200px;
+	        	}

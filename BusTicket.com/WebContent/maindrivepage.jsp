@@ -7,43 +7,6 @@
         <title>BusTicket.com</title>
         <link rel="stylesheet" href="VIEW/CSS/maindrivepage.css">
         <link rel="icon" type="image/png" href="VIEW/CSS/IMAGES/favicon.png">
-        		<style>
-        		
-        		.down_panel {
-        		height: 300px;}
-        			#bp_points, #dp_points, #bp_time, #dp_time, #pricelist, #aircondition, #bustype, #seattype, #totalseats, 
-        			#bookedseats, #driverno, #adriverno {
-        				margin-left: 20px;
-        				font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    					font-weight: bold;
-    					font-size: 20px;
-        			}
-        			
-        			#busdriver_button, #businfo_button, #download_button {
-        				margin-top: 10px;
-        				margin-left: 20px;
-        				width: 200px;
-        				height: 30px;
-        				background-color: rgb(77, 77, 77);
-        				color: white;
-        				font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    					font-weight: bold;
-    					font-size: 20px;
-    					border-radius: 10px;
-        			}
-        			
-        			#businfo_button {
-        				margin-top: -30px;
-        				margin-left: 300px;
-        			}
-        			
-        			#download_button {
-        				width: 300px;
-        				margin-top: -30px;
-        				margin-left: 570px;
-        			}
-        		
-				</style>
 	</head>
 	<body>
 	<script type="text/javascript">
@@ -72,7 +35,7 @@
                 </div>
                 <div class="menu">
                     <ul>
-                        <li><a href="#" style="padding: 14px 20px;">HOME</a></li>
+                        <li><a href="index.html" style="padding: 14px 20px;">HOME</a></li>
                         
                         <div class="dropdown">
 						    <button class="dropbtn">VIEW 
@@ -80,7 +43,7 @@
 						    </button>
 						    <div class="dropdown-content">
 						      <a href="viewbusdriver.jsp">BUS DRIVER</a>
-						      <a href="#">BUS DETAILS</a>
+						      <a href="viewbusinfo.jsp">BUS DETAILS</a>
 						    </div>
 						  </div> 
                         <div class="dropdown">
@@ -89,7 +52,7 @@
 						    </button>
 						    <div class="dropdown-content">
 						      <a href="#">PROFILE</a>
-						      <a href="#">SIGN OUT</a>
+						      <a href="index.html">SIGN OUT</a>
 						    </div>
 						  </div> 
                     </ul>

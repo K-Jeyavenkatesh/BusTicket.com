@@ -10,211 +10,24 @@
         <link rel="stylesheet" href="VIEW/CSS/reqular.css">
         <link rel="stylesheet" href="VIEW/CSS/viewbusdriver.css">
         <link rel="icon" type="image/png" href="VIEW/CSS/IMAGES/favicon.png">
-        <style>
-	        .mainpanel {
-	        	position: absoulte;
-	        }
-        	.toppanel {
-        		position: absoulte;
-        		margin-top: 200px;
-        		margin-left: 100px;
-        		width: 400px;
-        		height: 300px;
-        		background-color: rgb(77, 77, 77);
-        		border-radius: 20px;
-        		opacity: 0.7;
-        	}
-        	
-        	.maindownpanel {
-        		position: absoulte;
-        		margin-top: -450px;
-        		margin-left: 550px;
-        		width: 800px;
-        		height: 600px;
-        		background-color: white;
-        		border-radius: 20px;
-        		overflow-y: auto;
-        		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    			font-weight: bold;
-    			font-size: 20px;
-        	}
-        	
-        	#name {
-        		position: relative;
-        		top: 50px;
-        		left: 30px;
-        	}
-        	
-        	#licenceno {
-        		position: relative;
-        		top: 100px;
-        		left: -430px;
-        	}
-        	
-        	#emailid {
-        		position: relative;
-        		top: 122px;
-        		left: -375px;
-        	}
-        	
-        	#phoneno {
-        		position: relative;
-        		top: 152px;
-        		left: -375px;
-        	}
-        	
-        	#agencyname {
-        		position: relative;
-        		top: 182px;
-        		left: -375px;
-        	}
-        	
-        	#licencefront {
-        		position: relative;
-        		top: 230px;
-        		left: -375px;
-        	}
-        	
-        	#licenceback {
-        		position: relative;
-        		top: 300px;
-        		left: -410px;
-        	}
-        	
-        	#ans_name, #ans_licence, #ans_emailid, #ans_phone, #ans_agencyname, #ans_download {
-        		position: relative;
-        		top: 50px;
-        		left: 230px;
-        		width: 400px;
-        		height: 30px;
-        		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    			font-weight: bold;
-    			font-size: 20px;
-    			text-align: center;
-        	}
-        	
-        	#ans_licence {
-        		top: 70px;
-        		left: 285px;
-        	}
-        	
-        	#ans_emailid {
-        		top: 95px;
-        		left: 285px;
-        		
-        	}
-        	
-        	#ans_phone {
-        		top: 120px;
-        		left: 285px;
-        	}
-        	
-        	#ans_agencyname {
-        		top: 152px;
-        		left: 285px;
-        	}
-        	
-        	#ans_licencefront {
-        		position: relative;
-        		top: 230px;
-        		left: 185px;
-        		margin-top: 15px;
-        		margin-bottom: 15px;
-        	}
-        	
-        	#ans_licenceback {
-        		position: relative;
-        		top: 300px;
-        		left: 185px;
-        		margin-top: 15px;
-        		margin-bottom: 15px;
-        	}
-        	
-        	#downloadtext {
-        		position: relative;
-        		top: 310px;
-        		left: 50px;
-        		margin-top: 15px;
-        		margin-bottom: 15px;
-        	}
-        	
-        	#ans_download {
-        		position: relative;
-        		top: 320px;
-        		left: 200px;
-        		height: 50px;
-        		margin-top: 15px;
-        		margin-bottom: 15px;
-        		cursor: pointer;
-        		
-        	}
-        	
-        	#licence_no, #phone_no {
-        		position: absolute;
-        		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    			font-weight: bold;
-    			font-size: 20px;
-    			left: 150px;
-    			top: 275px;
-        	}
-        	
-        	#ans_licence_no, #ans_phone_no {
-        		position: absolute;
-        		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    			font-weight: bold;
-    			font-size: 20px;
-    			left: 150px;
-    			top: 300px;
-    			width: 300px;
-    			height: 30px;
-        	}
-        	
-        	#phone_no {
-        		top: 350px;
-        	}
-        	
-        	#ans_phone_no {
-        		top: 375px;
-        	}
-        	#filterApplyinfo {
-        		position: absolute;
-        		height: 40px;
-        		width: 100px;
-        		top: 450px;
-        		left: 350px;
-        		background-color: #ffc400;
-        		color: rgb(77,77,77);
-        		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    			font-weight: bold;
-    			font-size: 20px;
-        	}
-        </style>
 	</head>
 	<body>
 		<div class="main">
 			<div class="navbar">
                 <div class="icon">
-                    <h2 class="logo"><a href="#">BusTicket.com</a></h2>
+                    <h2 class="logo"><a href="index.html">BusTicket.com</a></h2>
                 </div>
                 <div class="menu">
                     <ul>
-                        <li><a href="#" style="padding: 14px 20px;">HOME</a></li>
-                        <div class="dropdown">
-						    <button class="dropbtn">EDIT 
-						      <i class="fa fa-caret-down"></i>
-						    </button>
-						    <div class="dropdown-content">
-						      <a href="#">BUS DRIVER</a>
-						      <a href="#">BUS DETAILS</a>
-						    </div>
-						  </div>
+                        <li><a href="index.html" style="padding: 14px 20px;">HOME</a></li>
+                       
                         <div class="dropdown">
 						    <button class="dropbtn">VIEW 
 						      <i class="fa fa-caret-down"></i>
 						    </button>
 						    <div class="dropdown-content">
 						      <a href="viewbusdriver.jsp">BUS DRIVER</a>
-						      <a href="#">BUS DETAILS</a>
+						      <a href="viewbusinfo.jsp">BUS DETAILS</a>
 						    </div>
 						  </div> 
                         <div class="dropdown">
@@ -223,7 +36,7 @@
 						    </button>
 						    <div class="dropdown-content">
 						      <a href="#">PROFILE</a>
-						      <a href="#">SIGN OUT</a>
+						      <a href="index.html">SIGN OUT</a>
 						    </div>
 						  </div> 
                     </ul>

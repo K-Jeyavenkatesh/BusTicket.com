@@ -234,6 +234,22 @@ ul li a:hover {
 	position : absolute;
 }
 
+#filter_submit{
+        		position :absolute;
+				background-color: white;
+				 color: black;
+				 top: 250px;
+				width: 120px;
+				height: 40px;											
+				font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+				font-weight: bold;
+				font-size: 15px;
+				cursor: pointer;
+				text-align: center;
+				border: none;
+				border-radius: 10px;
+        	}
+
 
 
 

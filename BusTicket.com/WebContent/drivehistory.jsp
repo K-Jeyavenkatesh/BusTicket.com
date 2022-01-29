@@ -8,111 +8,24 @@
         <link rel="stylesheet" href="VIEW/CSS/reqular.css">
         <link rel="stylesheet" href="VIEW/CSS/drivehistory.css">
         <link rel="icon" type="image/png" href="VIEW/CSS/IMAGES/favicon.png">
-        <style>
-        	.blockpanel{
-        		position: absolute;
-        		margin-top: 50px;
-        		left: 100px;
-        		width:1300px;
-        		height: 600px;
-        		background-color: white;
-        		border-radius: 20px;
-        		opacity: 0.9;
-        		overflow-y; auto;
-        	}
-        	
-        	.blockelements {
-        		position: relative;
-        		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    			font-weight: bold;
-    			font-size: 20px;
-        		width: 1250px;
-        		height: 75px;
-        		left: 25px;
-        		color: white;
-        		background-color: rgb(77, 77, 77);
-        		margin-top: 10px;
-        		margin-bottom: 10px; 
-        		border-radius: 20px;
-        	}
-        	
-        	#journeyid {
-        		position: relative;
-        		left: 10px;
-        		top: 23px;
-        		width: 200px;
-        	}
-        	
-        	#busno {
-        		position: relative;
-        		left: 175px;
-        		width: 200px;
-        	}
-        	
-        	#places {
-        		position: relative;
-        		left: 325px;
-        		width: 300px;
-        		top: -22px;
-        	}
-	       
-	       #duration {
-        		position: relative;
-        		left: 550px;
-        		width: 200px;
-        		top: -45px;
-        	}
-        	
-        	#date {
-        		position: relative;
-        		left: 775px;
-        		width: 200px;
-        		top: -65px;
-        	}
-        	
-        	#submit_button {
-        		position: relative;
-        		left: 925px;
-        		width: 300px;
-        		height: 40px;
-        		top: -95px;
-        		cursor: pointer;
-				text-align: center;
-				border: none;
-				border-radius: 10px;
-				background-color: #ffc400;
-				color: white;
-				font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    			font-weight: bold;
-    			font-size: 20px;
-        	}
-        </style>
 	</head>
 	<body>
 		<div class="main">
 			<div class="navbar">
                 <div class="icon">
-                    <h2 class="logo"><a href="#">BusTicket.com</a></h2>
+                    <h2 class="logo"><a href="index.html">BusTicket.com</a></h2>
                 </div>
                 <div class="menu">
                     <ul>
-                        <li><a href="#" style="padding: 14px 20px;">HOME</a></li>
-                        <div class="dropdown">
-						    <button class="dropbtn">EDIT 
-						      <i class="fa fa-caret-down"></i>
-						    </button>
-						    <div class="dropdown-content">
-						      <a href="#">BUS DRIVER</a>
-						      <a href="#">BUS DETAILS</a>
-						    </div>
-						  </div>
+                        <li><a href="index.html" style="padding: 14px 20px;">HOME</a></li>
+                        
                         <div class="dropdown">
 						    <button class="dropbtn">VIEW 
 						      <i class="fa fa-caret-down"></i>
 						    </button>
 						    <div class="dropdown-content">
 						      <a href="viewbusdriver.jsp">BUS DRIVER</a>
-						      <a href="#">BUS DETAILS</a>
+						      <a href="viewbusinfo.jsp">BUS DETAILS</a>
 						    </div>
 						  </div> 
                         <div class="dropdown">
@@ -121,7 +34,7 @@
 						    </button>
 						    <div class="dropdown-content">
 						      <a href="#">PROFILE</a>
-						      <a href="#">SIGN OUT</a>
+						      <a href="index.html">SIGN OUT</a>
 						    </div>
 						  </div> 
                     </ul>

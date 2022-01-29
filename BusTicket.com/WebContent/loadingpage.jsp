@@ -3,41 +3,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 	<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-	<title>Insert title here</title>
-	<style>
-		.loader {
-			position: absolute;
-			top: 150px;
-			left: 650px;
-			  border: 16px solid rgb(77, 77, 77);
-			  border-radius: 50%;
-			  border-top: 16px solid #ffc400;
-			  width: 120px;
-			  height: 120px;
-			  -webkit-animation: spin 2s linear infinite; /* Safari */
-			  animation: spin 2s linear infinite;
-		}
-		
-		#text {
-			position: absolute;
-			top: 350px;
-			left: 550px;
-			font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-   			font-weight: bold;
-   			font-size: 20px;
-		}
-		
-		@-webkit-keyframes spin {
-		  0% { -webkit-transform: rotate(0deg); }
-		  100% { -webkit-transform: rotate(360deg); }
-		}
-		
-		@keyframes spin {
-		  0% { transform: rotate(0deg); }
-		  100% { transform: rotate(360deg); }
-		}
-	</style>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BusTicket.com</title>
+        <link rel="stylesheet" href="VIEW/CSS/loadingpage.css">
+        <link rel="icon" type="image/png" href="VIEW/CSS/IMAGES/favicon.png">
+	
 	</head>
 	<body>
 		<script type="text/javascript">
@@ -48,11 +18,8 @@
 			        seconds;
 			    var flag = true;
 			    function timer() {
-			        // get the number of seconds that have elapsed since 
-			        // startTimer() was called
+			       
 			        diff = duration - (((Date.now() - start) / 1000) | 0);
-	
-			        // does the same job as parseInt truncates the float
 			        minutes = (diff / 60) | 0;
 			        seconds = (diff % 60) | 0;
 	

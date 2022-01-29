@@ -350,6 +350,40 @@ ul li a:hover {
 		        		display: none;
 		        		border-radius: 20px;
 					}
+					
+					.down_panel {
+        		height: 300px;}
+        			#bp_points, #dp_points, #bp_time, #dp_time, #pricelist, #aircondition, #bustype, #seattype, #totalseats, 
+        			#bookedseats, #driverno, #adriverno {
+        				margin-left: 20px;
+        				font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    					font-weight: bold;
+    					font-size: 20px;
+        			}
+        			
+        			#busdriver_button, #businfo_button, #download_button {
+        				margin-top: 10px;
+        				margin-left: 20px;
+        				width: 200px;
+        				height: 30px;
+        				background-color: rgb(77, 77, 77);
+        				color: white;
+        				font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    					font-weight: bold;
+    					font-size: 20px;
+    					border-radius: 10px;
+        			}
+        			
+        			#businfo_button {
+        				margin-top: -30px;
+        				margin-left: 300px;
+        			}
+        			
+        			#download_button {
+        				width: 300px;
+        				margin-top: -30px;
+        				margin-left: 570px;
+        			}
 
 
 

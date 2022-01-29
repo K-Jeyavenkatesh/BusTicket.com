@@ -10,146 +10,24 @@
         <link rel="stylesheet" href="VIEW/CSS/reqular.css">
         <link rel="stylesheet" href="VIEW/CSS/viewbusinfo.css">
         <link rel="icon" type="image/png" href="VIEW/CSS/IMAGES/favicon.png">
-        <style>
-	        .mainpanel {
-	        	position: absoulte;
-	        }
-        	.toppanel {
-        		position: absoulte;
-        		margin-top: 200px;
-        		margin-left: 100px;
-        		width: 400px;
-        		height: 300px;
-        		background-color: rgb(77, 77, 77);
-        		border-radius: 20px;
-        		opacity: 0.7;
-        	}
-        	
-        	.maindownpanel {
-        		position: absoulte;
-        		margin-top: -450px;
-        		margin-left: 550px;
-        		width: 800px;
-        		height: 600px;
-        		background-color: white;
-        		border-radius: 20px;
-        		overflow-y: auto;
-        		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    			font-weight: bold;
-    			font-size: 20px;
-        	}
-        	
-        	#bus_nol {
-        		position: absolute;
-        		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    			font-weight: bold;
-    			font-size: 20px;
-    			left: 150px;
-    			top: 275px;
-        	}
-        	
-        	#ans_bus_nol {
-        		position: absolute;
-        		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    			font-weight: bold;
-    			font-size: 20px;
-    			left: 150px;
-    			top: 300px;
-    			width: 300px;
-    			height: 30px;
-        	}
-        	
-        	#filterApplyinfo {
-        		position: absolute;
-        		height: 40px;
-        		width: 100px;
-        		top: 450px;
-        		left: 350px;
-        		background-color: #ffc400;
-        		color: rgb(77,77,77);
-        		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    			font-weight: bold;
-    			font-size: 20px;
-        	}
-        	
-        	#bus_no , #bus_model, #bus_ownername, #bus_owneremailid, #bus_ownerphone, #bus_travelname{
-        		position: relative;
-        		top: 20px;
-        		margin: 20px;
-        	}
-        	
-        	#ans_bus_no , #ans_bus_model, #ans_bus_ownername, #ans_bus_owneremailid, #ans_bus_ownerphone, #ans_bus_travelname{
-        		position: relative;
-        		top: 20px;
-        		width: 400px;
-        		height: 30px;
-        		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    			font-weight: bold;
-    			font-size: 20px;
-        	}
-        	
-        	#ans_bus_no {
-        		left: 100px;
-        	}
-        	#ans_bus_model {
-        		left: 70px;
-        	}
-        	#ans_bus_ownername {
-        		left: 52px;
-        	}
-        	#ans_bus_owneremailid {
-        		left: 30px;
-        	}
-        	#ans_bus_ownerphone {
-        		left: 48px;
-        	}
-        	#ans_bus_travelname {
-        		left: -13px;
-        	}
-        	
-        	#rc, #insu, #puc, #fit {
-        		
-        		height: 50px;
-        		width: 300px;
-        		top: 450px;
-        		left: 350px;
-        		background-color: #ffc400;
-        		color: rgb(77,77,77);
-        		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    			font-weight: bold;
-    			font-size: 20px;
-    			border-radius: 10px;
-    			border: 5px solid rgb(77,77,77);
-    			margin: 10px;
-    			margin-left: 250px;
-        	}
-        </style>
 	</head>
 	<body>
 		<div class="main">
 			<div class="navbar">
                 <div class="icon">
-                    <h2 class="logo"><a href="#">BusTicket.com</a></h2>
+                    <h2 class="logo"><a href="index.html">BusTicket.com</a></h2>
                 </div>
                 <div class="menu">
                     <ul>
-                        <li><a href="#" style="padding: 14px 20px;">HOME</a></li>
-                        <div class="dropdown">
-						    <button class="dropbtn">EDIT 
-						      <i class="fa fa-caret-down"></i>
-						    </button>
-						    <div class="dropdown-content">
-						      <a href="#">BUS DRIVER</a>
-						      <a href="#">BUS DETAILS</a>
-						    </div>
-						  </div>
+                        <li><a href="index.html" style="padding: 14px 20px;">HOME</a></li>
+                        
                         <div class="dropdown">
 						    <button class="dropbtn">VIEW 
 						      <i class="fa fa-caret-down"></i>
 						    </button>
 						    <div class="dropdown-content">
 						      <a href="viewbusdriver.jsp">BUS DRIVER</a>
-						      <a href="#">BUS DETAILS</a>
+						      <a href="viewbusinfo.jsp">BUS DETAILS</a>
 						    </div>
 						  </div> 
                         <div class="dropdown">
@@ -158,7 +36,7 @@
 						    </button>
 						    <div class="dropdown-content">
 						      <a href="#">PROFILE</a>
-						      <a href="#">SIGN OUT</a>
+						      <a href="index.html">SIGN OUT</a>
 						    </div>
 						  </div> 
                     </ul>

@@ -8,25 +8,6 @@
 		<title>BusTicket.com</title>
         <link rel="stylesheet" href="VIEW/CSS/seatbook.css">
         <link rel="icon" type="image/png" href="VIEW/CSS/IMAGES/favicon.png">
-        
-        <style>
-        	.submit_button {
-        		position:absolute; 
-        		top:600px;
-        		left:1150px;
-        		width:200px;
-        		height:50px;
-           		background-color: #ffc400;
-				color: white;
-				font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-				font-weight: bold;
-				font-size: 20px;
-				cursor: pointer;
-				text-align: center;
-				border: none;
-				border-radius: 10px;
-        	}
-        </style>
 	</head>
 	<% HttpSession sessin = request.getSession();%>
     <% BusDetails curentBus = (BusDetails)sessin.getAttribute("currentBus"); %>
@@ -127,7 +108,7 @@
 	    		seatNumbers.sort();
 	    		var num_seats = seatNumbers.length;
 	    		
-	    		//console.log("Number : "+num_seats);
+	    		
 	    		document.getElementById("price_booked_number").value = num_seats;
 	    		document.getElementById("price_booked_total").value = document.getElementById("price_booked_now").value * num_seats;
 	    		console.log(document.getElementById("price_booked_total").value);
@@ -137,7 +118,7 @@
 	    		arr.innerHTML = seatNumbers.toString();
 	    		arr.value = seatNumbers.toString();
 	    		document.getElementById("i_seats_booked_now").value = seatNumbers.toString();
-	    		//console.log(seatNumbers);
+	    		
 	    		totalAmount();
 	    	}
 	    	function addInsurance() {
@@ -169,11 +150,11 @@
 		<div class="main">
 			<div class="navbar">
                 <div class="icon">
-                    <h2 class="logo"><a href="#">BusTicket.com</a></h2>
+                    <h2 class="logo"><a href="index.html">BusTicket.com</a></h2>
                 </div>
                 <div class="menu">
                     <ul>
-                        <li><a href="www.google.com">HOME</a></li>
+                        <li><a href="index.html">HOME</a></li>
                         <li><a href="#">ABOUT</a></li>
                         <li><a href="#">SERVICE</a></li>
                         <div class="dropdown">

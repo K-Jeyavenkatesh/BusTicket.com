@@ -13,3 +13,81 @@
   
 }
 
+.blockpanel{
+        		position: absolute;
+        		margin-top: 50px;
+        		left: 100px;
+        		width:1300px;
+        		height: 600px;
+        		background-color: white;
+        		border-radius: 20px;
+        		opacity: 0.9;
+        		overflow-y; auto;
+        	}
+        	
+        	.blockelements {
+        		position: relative;
+        		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    			font-weight: bold;
+    			font-size: 20px;
+        		width: 1250px;
+        		height: 75px;
+        		left: 25px;
+        		color: white;
+        		background-color: rgb(77, 77, 77);
+        		margin-top: 10px;
+        		margin-bottom: 10px; 
+        		border-radius: 20px;
+        	}
+        	
+        	#journeyid {
+        		position: relative;
+        		left: 10px;
+        		top: 23px;
+        		width: 200px;
+        	}
+        	
+        	#busno {
+        		position: relative;
+        		left: 175px;
+        		width: 200px;
+        	}
+        	
+        	#places {
+        		position: relative;
+        		left: 325px;
+        		width: 300px;
+        		top: -22px;
+        	}
+	       
+	       #duration {
+        		position: relative;
+        		left: 550px;
+        		width: 200px;
+        		top: -45px;
+        	}
+        	
+        	#date {
+        		position: relative;
+        		left: 775px;
+        		width: 200px;
+        		top: -65px;
+        	}
+        	
+        	#submit_button {
+        		position: relative;
+        		left: 925px;
+        		width: 300px;
+        		height: 40px;
+        		top: -95px;
+        		cursor: pointer;
+				text-align: center;
+				border: none;
+				border-radius: 10px;
+				background-color: #ffc400;
+				color: white;
+				font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    			font-weight: bold;
+    			font-size: 20px;
+        	}
+

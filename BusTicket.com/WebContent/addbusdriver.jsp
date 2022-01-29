@@ -6,65 +6,18 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 			<title>BusTicket.com</title>
 			<link rel="stylesheet" type="text/css" href="VIEW/CSS/reqular.css">
-			<link rel="stylesheet" type="text/css" href="VIEW/CSS/addbusdrive.css">
+			<link rel="stylesheet" type="text/css" href="VIEW/CSS/addbusdriver.css">
 	        <link rel="icon" type="image/png" href="VIEW/CSS/IMAGES/favicon.png">
-	        <style>
-	        	.mainpanel {
-	        		position: absolute;
-	        		top: 100px;
-	        		left: 400px;
-	        		height: 600px;
-	        		width: 700px;
-	        		background-color: white;
-	        		border-radius: 20px;
-	        		opacity: 0.9;
-	        		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    				font-weight: bold;
-    				font-size: 20px;
-	        	}
-	        	
-	        	#name, #licno, #emailid, #number, #fphoto, #bphoto, #health {
-	        		margin-left: 150px;
-	        		
-	        	}
-	        	
-	        	#ans_name, #ans_licno, #ans_emailid, #ans_number, #ans_fphoto, #ans_bphoto, #ans_health {
-	        		margin-left: 150px;
-	        		margin-bottom: 20px;
-	        		height: 30px;
-	        		width: 400px;
-	        		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    				font-weight: bold;
-    				font-size: 15px;
-	        	}
-	        	
-	        	#submit_id {
-        		
-	        		height: 50px;
-	        		width: 300px;
-	        		top: 450px;
-	        		left: 300px;
-	        		background-color: #ffc400;
-	        		color: rgb(77,77,77);
-	        		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-	    			font-weight: bold;
-	    			font-size: 20px;
-	    			border-radius: 10px;
-	    			border: none;
-	    			margin: 10px;
-	    			margin-left: 200px;
-	        	}
-	        </style>
 	</head>
 	<body>
 		<div class="main">
             <div class="navbar">
                 <div class="icon">
-                    <h2 class="logo"><a href="#">BusTicket.com</a></h2>
+                    <h2 class="logo"><a href="index.html">BusTicket.com</a></h2>
                 </div>
                 <div class="menu">
                     <ul>
-                        <li><a href="www.google.com">HOME</a></li>
+                        <li><a href="index.html">HOME</a></li>
                         <li><a href="#">ABOUT</a></li>
                         <li><a href="#">SERVICE</a></li>
                         <div class="dropdown">
@@ -73,7 +26,7 @@
 						    </button>
 						    <div class="dropdown-content">
 						      <a href="#">PROFILE</a>
-						      <a href="#">SIGN OUT</a>
+						      <a href="index.html">SIGN OUT</a>
 						    </div>
 						  </div> 
                     </ul>

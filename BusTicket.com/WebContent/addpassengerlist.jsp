@@ -7,25 +7,6 @@
 		<title>BusTicket.com</title>
 		<link rel="stylesheet" type="text/css" href="VIEW/CSS/addpassengerlist.css">
         <link rel="icon" type="image/png" href="VIEW/CSS/IMAGES/favicon.png">
-        <style>
-        	#pass_submit {
-        		positive: relative;
-				margin-top: 30px;
-				margin-bottom: 30px;
-				margin-left: 340px;
-				width: 200px;
-				height: 50px;
-				background-color: #ffc400;
-				color: white;
-				font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-				font-weight: bold;
-				font-size: 20px;
-				cursor: pointer;
-				text-align: center;
-				border: 2px solide black;
-				border-radius: 10px;
-        	}
-         </style>
 	</head>
 	<body>
 	<script>
@@ -36,11 +17,11 @@
 		<div class="main">
             <div class="navbar">
                 <div class="icon">
-                    <h2 class="logo"><a href="#">BusTicket.com</a></h2>
+                    <h2 class="logo"><a href="index.html">BusTicket.com</a></h2>
                 </div>
                 <div class="menu">
                     <ul>
-                        <li><a href="www.google.com">HOME</a></li>
+                        <li><a href="index.html">HOME</a></li>
                         <li><a href="#">ABOUT</a></li>
                         <li><a href="#">SERVICE</a></li>
                         <div class="dropdown">

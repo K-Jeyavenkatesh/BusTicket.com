@@ -363,8 +363,5 @@ public class BusDriveManagerDaoImpl implements BusDriveManagerDao{
 		}
 		return password;
 	}
-
-	/*public static void main(String[] args) {
-		new BusDriveManagerDaoImpl().getAllHistory();
-	}*/
+	
 }

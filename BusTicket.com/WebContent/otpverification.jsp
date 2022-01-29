@@ -8,70 +8,6 @@
 		<title>BusTicket.com</title>
 		<link rel="stylesheet" type="text/css" href="VIEW/CSS/otpverification.css">
         <link rel="icon" type="image/png" href="VIEW/CSS/IMAGES/favicon.png">
-        <style type="text/css">
-        	.block_panel{
-        		position: absolute;
-        		width: 600px;
-        		height: 600px;
-        		top: 100px;
-        		left: 425px;
-        		background-color: white;
-        		border-radius: 20px;
-        		opacity: 0.9;
-        	}
-        	
-        	#otp_title, #otp_text, #time1 {
-        		position: absolute;
-        		top: 30px;
-        		left: 165px;
-        		font-size: 30px;
-        		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    			font-weight: bold;
-        	}
-        	
-        	#otp_text {
-        		top: 130px;
-        		left: 50px;
-        		font-size: 20px;
-        	}
-        	
-        	#time1 {
-        		top: 290px;
-        		left: 155px;
-        		font-size: 20px;
-        	}
-        	
-        	#otp_input {
-        		position: absolute;
-        		top: 200px;
-        		left: 190px;
-        		height: 55px;
-        		font-size: 20px;
-        		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    			font-weight: bold;
-    			background-color: grey;
-        	}
-        	#submitButton, Button {
-        		position :absolute;
-				background-color: rgb(77, 77, 77);
-				color: white;
-				width: 120px;
-				height: 40px;
-				top: 480px;
-        		left: 240px;
-				font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-				font-weight: bold;
-				font-size: 15px;
-				cursor: pointer;
-				text-align: center;
-				border: none;
-				border-radius: 10px;
-        	}
-        	
-        	Button {
-        		top: 325px;
-        	}
-        </style>
 	</head>
 	<body>
 	<script>
@@ -152,7 +88,7 @@
 			<div class="main">
 	            <div class="navbar">
 	                <div class="icon">
-	                    <h2 class="logo"><a href="#">BusTicket.com</a></h2>
+	                    <h2 class="logo"><a href="index.html">BusTicket.com</a></h2>
 	                </div>
 	            </div>
 	            <% Passenger passenger = (Passenger) session.getAttribute("passenger");

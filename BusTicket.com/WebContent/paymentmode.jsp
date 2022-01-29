@@ -37,11 +37,11 @@
 		<div class="main">
             <div class="navbar">
                 <div class="icon">
-                    <h2 class="logo"><a href="#">BusTicket.com</a></h2>
+                    <h2 class="logo"><a href="index.html">BusTicket.com</a></h2>
                 </div>
                 <div class="menu">
                     <ul>
-                        <li><a href="www.google.com">HOME</a></li>
+                        <li><a href="index.html">HOME</a></li>
                         <li><a href="#">ABOUT</a></li>
                         <li><a href="#">SERVICE</a></li>
                         <div class="dropdown">
@@ -49,7 +49,7 @@
 						      <i class="fa fa-caret-down"></i>
 						    </button>
 						    <div class="dropdown-content">
-						      <a href="#">PROFILE</a>
+						      <a href="profile.jsp">PROFILE</a>
 						      <a href="index.html" onclick="logout()">SIGN OUT</a>
 						    </div>
 						  </div>  

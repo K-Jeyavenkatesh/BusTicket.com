@@ -102,57 +102,5 @@ public class TicketDaoImpl implements TicketDao{
 		return ticket;
 	}
 	
-	/*public static void main(String[] args) {
-		new TicketDaoImpl().getTicket("91653218");
-	}*/
-	
-	/*public static void main(String[] args) {
-		BusDetails busdetails = new BusDetails();
-		busdetails.setBusID("1");
-		Ticket ticket = new Ticket();
-		ticket.setBusdetails(busdetails);
-		ticket.setTransactionID("sg4Wq32hPisg4Wq32hPi");
-		ticket.setTransactionMode("debit");
-		ArrayList<TravelInformation> info = new ArrayList<TravelInformation>();
-		TravelInformation s1 = new TravelInformation();
-		s1.setJourneyID("1");
-		s1.setPassengerEmailIds("jeyavenkatesh9@gmail.com");
-		s1.setPassengerNames("Kjv");
-		s1.setPassengerAge("34");
-		s1.setPassengerGender("Male");
-		s1.setPassengerBoardings("Tirunelveli");
-		s1.setPassengerDroppings("Kedarnath");
-		TravelInformation s2 = new TravelInformation();
-		s2.setJourneyID("1");
-		s2.setPassengerEmailIds("jeyavenkatesh9@gmail.com");
-		s2.setPassengerNames("qwerty");
-		s2.setPassengerAge("67");
-		s2.setPassengerGender("FeMale");
-		s2.setPassengerBoardings("Tirunelveli");
-		s2.setPassengerDroppings("Kedarnath");
-		info.add(s1);
-		info.add(s2);
-		TravelInformation s3 = new TravelInformation();
-		s3.setJourneyID("1");
-		s3.setPassengerEmailIds("jeyavenkatesh9@gmail.com");
-		s3.setPassengerNames("Kjv");
-		s3.setPassengerAge("34");
-		s3.setPassengerGender("Male");
-		s3.setPassengerBoardings("Tirunelveli");
-		s3.setPassengerDroppings("Kedarnath");
-		TravelInformation s4 = new TravelInformation();
-		s4.setJourneyID("1");
-		s4.setPassengerEmailIds("jeyavenkatesh9@gmail.com");
-		s4.setPassengerNames("qwerty");
-		s4.setPassengerAge("67");
-		s4.setPassengerGender("FeMale");
-		s4.setPassengerBoardings("Tirunelveli");
-		s4.setPassengerDroppings("Kedarnath");
-		info.add(s3);
-		info.add(s4);
-		ticket.setTravelnfo(info);
-		long pnr = new TicketDaoImpl().addTicket(ticket);
-		System.out.println(pnr);
-	}*/
 
 }

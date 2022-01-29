@@ -23,4 +23,39 @@
 	        		opacity: 0.9;
 	        		border-radius: 20px;
 	        		overflow-y: auto;
+	        		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    				font-weight: bold;
+    				font-size: 20px;
+	        	}
+	        	
+	        	#busno, #busmodelname, #ownername, #ownerphone, #owneremail, #rcbook, #insurance, #PUCCertificate, #fitness {
+	        		margin-left: 150px;
+	        	}
+	        	
+	        	#ans_busno, #ans_busmodelname, #ans_ownername, #ans_ownerphone, #ans_owneremail, #ans_rcbook, #ans_insurance, #ans_PUCCertificate, #ans_fitness {
+	        		margin-left: 150px;
+	        		margin-bottom: 15px;
+	        		height: 30px;
+	        		width: 400px;
+	        		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    				font-weight: bold;
+    				font-size: 15px;
+	        	}
+	        	
+	        	#submit_id {
+        		
+	        		height: 50px;
+	        		width: 200px;
+	        		top: 450px;
+	        		left: 300px;
+	        		background-color: #ffc400;
+	        		color: rgb(77,77,77);
+	        		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	    			font-weight: bold;
+	    			font-size: 20px;
+	    			border-radius: 10px;
+	    			border: none;
+	    			margin: 10px;
+	    			margin-left: 450px;
+	    			margin-top: -70px;
 	        	}

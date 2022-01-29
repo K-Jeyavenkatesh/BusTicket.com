@@ -7,70 +7,6 @@
 		<title>BusTicket.com</title>
 		<link rel="stylesheet" type="text/css" href="VIEW/CSS/profile.css">
         <link rel="icon" type="image/png" href="VIEW/CSS/IMAGES/favicon.png">
-        <style>
-        	.mainblockpanel{
-        		position: absolute;
-        		top: 100px;
-        		left: 400px;
-        		width: 700px;
-        		height: 600px;
-        		background-color: white;
-        		border-radius: 20px;
-        		opacity: 0.9;
-        		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    			font-weight: bold;
-    			font-size: 20px;
-        	}
-        	
-        	#username,  #fullname,  #dob, #gender, #phone, #email, #password{
-				
- 				margin-left: 120px;
-        	}
-        	
-        	#ans_username, #ans_fullname,  #ans_dob, #ans_gender, #ans_phone, #ans_email, #ans_password{
- 				margin-left: 120px;
- 				margin-bottom: 20px;
-        		width: 400px;
-        		height: 30px;
-        		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        		font-weight: bold;
-    			font-size: 15px;
-        	}
-        	
-        	#update {
-        		positive: absolute;
-				margin-top: 20px;
-				margin-bottom: 30px;
-				margin-left: 340px;
-				width: 200px;
-				height: 50px;
-				background-color: rgb(77,77,77);
-				color: #ffc400;
-				font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-				font-weight: bold;
-				font-size: 20px;
-				cursor: pointer;
-				text-align: center;
-				border-radius: 10px;
-        	}
-        	
-        	#edit {
-        		positive: absolute;
-				margin-top: 50px;
-				margin-bottom: 30px;
-				margin-left: -500px;
-				width: 200px;
-				height: 50px;
-				background-color: rgb(77,77,77);
-				color: #ffc400;
-				font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-				font-weight: bold;
-				font-size: 20px;
-				cursor: pointer;
-				text-align: center;
-				border-radius: 10px;
-        	}
-        </style>
 	</head>
 	<body>
 		<script>
@@ -87,7 +23,7 @@
 		<div class="main">
             <div class="navbar">
                 <div class="icon">
-                    <h2 class="logo"><a href="#">BusTicket.com</a></h2>
+                    <h2 class="logo"><a href="index.html">BusTicket.com</a></h2>
                 </div>
                 <div class="menu">
                     <ul>
@@ -99,7 +35,7 @@
 						      <i class="fa fa-caret-down"></i>
 						    </button>
 						    <div class="dropdown-content">
-						      <a href="#">PROFILE</a>
+						      <a href="profile.jsp">PROFILE</a>
 						      <a href="index.html" onclick="logout()">SIGN OUT</a>
 						    </div>
 						  </div> 

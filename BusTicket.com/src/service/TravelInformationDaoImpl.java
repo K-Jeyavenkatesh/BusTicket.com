@@ -6,7 +6,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-import model.Passenger;
 import model.TravelInformation;
 
 public class TravelInformationDaoImpl implements TravelInformationDao{
@@ -110,21 +109,5 @@ public class TravelInformationDaoImpl implements TravelInformationDao{
 		return;
 	}
 	
-	/*public static void main(String[] args) {
-		ArrayList<TravelInformation> arr = new ArrayList<TravelInformation>();
-		for(int i = 0; i < 2; i++) {
-			
-			TravelInformation travel = new TravelInformation();
-			travel.setJourneyID((i+1)+"");
-			travel.setPassengerNames("sdf");
-			travel.setPassengerEmailIds("sdf");
-			travel.setPassengerAge("sdf");
-			travel.setPassengerGender("sdf");
-			travel.setPassengerBoardings("sdf");
-			travel.setPassengerDroppings("sdf");
-			arr.add(travel);
-		}
-		new TravelInformationDaoImpl().updateTravelsList(arr);
-	}*/
 
 }

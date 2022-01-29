@@ -127,3 +127,75 @@ ul li a:hover {
 .dropdown:hover .dropdown-content {
    display: block;
 }
+
+.mainblockpanel {
+        		position: absolute;
+        		top: 100px;
+        		left: 100px;
+        		width: 1300px;
+        		height: 600px;
+        		background-color: white;
+        		opacity: 0.9;
+        		border-radius: 20px;
+        		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	    		font-weight: bold;
+	    		font-size: 23px;
+        	}
+        	
+        	#tick {
+        		position: absolute;
+        		height: 100px;
+        		width: 100px;
+        		border-radius: 50%;
+        		left: 300px;
+        	}
+        	#tick_title {
+        		 position: absolute;
+        		font-size: 40px;
+        		top: 30px;
+        		left: 400px;
+        	}
+        	#pnr {
+        		position: absolute;
+        		top: 130px;
+        		left: 400px;
+        	}
+        	#tras_id {
+        		position: absolute;
+        		top: 170px;
+        		left: 400px;
+        	}
+        	#trans_mode {
+        		position: absolute;
+        		top: 220px;
+        		left: 400px;
+        	}
+        	#ticket {
+        		position: absolute;
+        		top: 270px;
+        		left: 400px;
+        	}
+        	#subtitle {
+        		position: absolute;
+        		top: 470px;
+        		left: 400px;
+        	}
+        	#gotohome {
+        		position: absolute;
+        		top: 540px;
+        		left: 550px;
+        	}
+        	#submit_id {
+        			position: absolute;
+	        		height: 50px;
+	        		width: 300px;
+	        		top: 320px;
+	        		left: 440px;
+	        		background-color: #ffc400;
+	        		color: rgb(77,77,77);
+	        		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	    			font-weight: bold;
+	    			font-size: 20px;
+	    			border-radius: 10px;
+	    			border: none;	
+	        	}

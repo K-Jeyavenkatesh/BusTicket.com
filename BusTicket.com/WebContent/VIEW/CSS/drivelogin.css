@@ -238,3 +238,12 @@ ul li a:hover {
         		top: 450px;
         		left: 350px;
         	}
+        	
+        	#passSubmit {
+			  	position: absolute;
+			  	top: 320px;
+			  	left: 100px;
+			  	border: none;
+			  	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+			  	font-size: 15px;
+			  }
