@@ -68,9 +68,9 @@ public class PaymentMode extends HttpServlet {
 		} catch (Exception e) {
 			
 		} finally {
-			//Passenger passenger = (Passenger) session.getAttribute("passenger");
-			//int otp = new OTPGenerator().OTPGenerator(passenger.getEmail());
-			int otp = new OTPGenerator().OTPGenerator("jeyavenkatesh9@gmail.com");
+			Passenger passenger = (Passenger) session.getAttribute("passenger");
+			int otp = new OTPGenerator().OTPGenerator(passenger.getEmail());
+			
 			session.setAttribute("otp", otp);
 			RequestDispatcher rd=request.getRequestDispatcher("otpverification.jsp");    
 			rd.forward(request, response);

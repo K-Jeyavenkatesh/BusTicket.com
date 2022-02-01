@@ -51,8 +51,4 @@ public class Gmail {
 		return Mailer.send(from,password,to,title,message);  
 		  
 		}   
-	
-	public static void main(String[] args) {
-		new Gmail().Gmail("19euit065@skcet.ac.in", "jeyavenkatesh9@gmail.com", "19euit065skcet@KJV9", "Testing", "Success");
-	}
 }

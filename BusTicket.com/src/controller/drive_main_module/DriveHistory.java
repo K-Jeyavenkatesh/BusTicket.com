@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import model.BusDetails;
+import model.BusDriveAdmin;
 import model.TravelInformation;
 import service.BusDriveManagerDaoImpl;
 
@@ -21,10 +22,18 @@ public class DriveHistory extends HttpServlet {
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		HttpSession session = request.getSession();
+		BusDriveAdmin admin = (BusDriveAdmin)session.getAttribute("busdriveadmin");
+		String travels = admin.getTravelsName();
 		Object[] obj = new BusDriveManagerDaoImpl().getAllHistory();
 		ArrayList<BusDetails> bustravelinfo = (ArrayList<BusDetails>) obj[1];
 		ArrayList<TravelInformation> travelinfo = (ArrayList<TravelInformation>) obj[0];
-		HttpSession session = request.getSession();
+		for(int i = 0; i < bustravelinfo.size(); i++) {
+			if(!(bustravelinfo.get(i).getBusTravelsName().equals(travels))) {
+				bustravelinfo.remove(i);
+				travelinfo.remove(i);
+			}
+		}
 		session.setAttribute("travelinfo", travelinfo);
 		session.setAttribute("bustravelinfo", bustravelinfo);
 		

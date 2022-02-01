@@ -169,7 +169,7 @@
 	            		<% String[] bp = bus.getBoardingPoints().split(" "); %>
 	            		<p id="departure">Departure: <%= bp[0] %></p>
 	            		<% String[] dp = bus.getDroppingPoints().split(" "); %>
-	            		<p id="arrival">Arrival: <%= dp[0] %></p>
+	            		<p id="arrival">Arrival: <%= dp[dp.length-1] %></p>
 	            		<button type="button" class="collapsible" onclick="show()" value="MoreDetails">More Details</button>
 	            		</div>
 	            		<div class="down_panel">

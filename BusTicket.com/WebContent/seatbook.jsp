@@ -298,7 +298,7 @@
 					        	"<input type=\"hidden\"id=\"date_booked_now\" name=\"date_booked\" value=\""+curentBus.getDate()+"\"></h2>"+
 					        	"<input type=\"hidden\"id=\"time_booked_now\" name=\"time_booked\" value=\""+bt[0]+" to "+dt[dt.length-1]+"\"></h2>"+
 					        	"<h2 id=\"time\" name=\"time\" value=\""+bt[0]+" to "+dt[dt.length-1]+"\">"+bt[0]+" to "+dt[dt.length-1]+"</h2>"+
-					        	"<h2 id=\"duration\">09hrs travel</h2>"+
+					        	
 					        	"<h2 id=\"seats_label\">Seats Booked : </h2>"+
 					        	"<h2 id=\"seats_booked_now\" name=\"seat_booked\" value=\"\"></h2>"+
 					        	"<input type=\"hidden\"id=\"i_seats_booked_now\" name=\"i_seat_booked\" value=\"\"></h2>"+
